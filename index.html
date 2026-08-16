@@ -12,10 +12,10 @@
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html,body{
-    font-family:"Yu Gothic UI","游ゴシック Medium",YuGothic,"Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    font-family:"Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
     color:var(--ink); background:#c9ccd2;
     -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-    font-feature-settings:"palt","kern"; font-weight:500;
+    font-feature-settings:"palt","kern"; font-weight:400;
   }
   .page{
     width:210mm;min-height:297mm;background:var(--paper);
@@ -26,7 +26,7 @@
   .mast{
     display:flex;justify-content:space-between;align-items:baseline;
     padding-bottom:2mm;border-bottom:.55mm solid var(--ink);
-    position:relative;margin-bottom:6mm;
+    position:relative;margin-bottom:5mm;
   }
   .mast::after{content:"";position:absolute;left:0;right:0;bottom:-1.3mm;height:.2mm;background:var(--ink);}
   .mast .a{font-size:8pt;letter-spacing:.28em;font-weight:800;}
@@ -58,12 +58,12 @@
     font-size:20.5pt;font-weight:700;letter-spacing:.04em;line-height:1.3;
   }
   .hl em{font-style:normal;color:var(--red);}
-  .dek{margin-top:2.6mm;font-size:9.6pt;line-height:1.8;color:var(--ink2);max-width:162mm;}
+  .dek{margin-top:2.6mm;font-size:9.6pt;line-height:1.72;color:var(--ink2);max-width:162mm;}
   .dek b{color:var(--ink);font-weight:800;}
   .bigs{
     display:grid;grid-template-columns:repeat(4,1fr);
     border-top:.4mm solid var(--ink);border-bottom:.15mm solid var(--hair);
-    margin:5mm 0;
+    margin:4.5mm 0;
   }
   .bigs .b{padding:3.2mm 4mm 2.8mm;border-left:.15mm solid var(--hair);}
   .bigs .b:first-child{border-left:none;padding-left:.5mm;}
@@ -96,19 +96,21 @@
   }
   table.ft thead th.r{text-align:right;}
   table.ft td{
-    padding:1.35mm 1.5mm;border-bottom:.15mm solid var(--hair2);
+    padding:2.2mm 1.5mm;border-bottom:.15mm solid var(--hair2);
     font-size:8.4pt;vertical-align:top;
   }
   table.ft td.n{font-weight:800;letter-spacing:.02em;white-space:nowrap;}
   table.ft td.r{font-family:"Segoe UI";font-weight:700;text-align:right;white-space:nowrap;font-size:8.6pt;}
   table.ft td.m{color:var(--ink2);font-size:7.9pt;}
+  table.ft tr:nth-last-child(-n+2) td{line-height:1.62;padding-top:1.5mm;padding-bottom:1.5mm;}
   table.ft tr.grp td{border-top:.4mm solid var(--ink);padding-top:1.8mm;}
-  .tagchip{display:inline-block;font-size:7pt;font-weight:800;letter-spacing:.08em;color:#fff;padding:.35mm 1.8mm;border-radius:.6mm;vertical-align:1px;}
+  .tagchip{display:inline-block;font-size:7pt;font-weight:800;letter-spacing:.08em;color:#fff;padding:.5mm 1.8mm;border-radius:.6mm;vertical-align:1px;white-space:nowrap;}
+  table.ft td:has(.tagchip){white-space:nowrap;text-align:center;}
   .tg-done{background:var(--red);} .tg-build{background:var(--orange);} .tg-plan{background:var(--mute);} .tg-own{background:var(--blue);}
   .note{
     margin-top:3.5mm;padding:2.8mm 4.5mm;background:#fff;border:.15mm solid var(--hair);
     border-left:.9mm solid var(--red);
-    font-size:8.8pt;line-height:1.75;color:var(--ink2);
+    font-size:8.8pt;line-height:1.68;color:var(--ink2);
   }
   .note h5{font-size:8.2pt;letter-spacing:.24em;font-weight:800;color:var(--ink);margin-bottom:1.2mm;}
   .note b{color:var(--ink);}
@@ -116,7 +118,7 @@
   .note.gv{border-left-color:var(--gold);}
   .note.gv h5 .gd{color:var(--gold);}
   .pull{
-    margin-top:3.6mm;padding-top:2.6mm;border-top:.4mm solid var(--ink);
+    margin-top:3mm;padding-top:2.2mm;border-top:.4mm solid var(--ink);
     display:grid;grid-template-columns:9mm 1fr auto;gap:2.5mm;align-items:start;
   }
   .pull .qm{font-family:Georgia,serif;font-size:26pt;color:var(--red);line-height:.6;font-weight:700;}
@@ -132,6 +134,8 @@
     font-size:7.4pt;letter-spacing:.05em;color:var(--mute);line-height:1.62;font-weight:600;}
   .src-grid .k{font-weight:800;color:var(--ink);white-space:nowrap;letter-spacing:.1em;}
   .tw2{display:grid;grid-template-columns:1fr 1fr;gap:5mm;}
+  section.page:nth-of-type(5) .note{line-height:1.62;}
+  section.page:nth-of-type(5) .card{padding-bottom:1.8mm;}
   .ix{font-size:8.2pt;font-weight:800;color:var(--ink);flex:1;border-bottom:.15mm solid var(--hair2);letter-spacing:.02em;display:flex;align-items:center;gap:1.5mm;white-space:nowrap;overflow:hidden;}
   .ix b{font-family:"Segoe UI",Verdana,sans-serif;color:var(--red);font-weight:700;}
   .ix span{margin-left:auto;font-size:7.5pt;color:var(--mute);font-weight:600;letter-spacing:.02em;}
@@ -150,7 +154,7 @@
   section.page:nth-of-type(4) .dek{font-size:10.2pt;line-height:1.85;}
   section.page:nth-of-type(4) .card{padding:4.5mm 5.5mm 4mm;}
   section.page:nth-of-type(4) .card .h .t{font-size:10pt;}
-  section.page:nth-of-type(4) .card div p{font-size:9.2pt !important;line-height:1.85 !important;padding:2.6mm 0 !important;}
+  section.page:nth-of-type(4) .card div p{font-size:9pt !important;line-height:1.7 !important;padding:1.8mm 0 !important;}
   section.page:nth-of-type(4) .note{font-size:9.6pt;line-height:1.9;padding:4mm 5.5mm;margin-top:5mm;}
   section.page:nth-of-type(4) .pull{margin-top:5.5mm;padding-top:3.5mm;}
   section.page:nth-of-type(4) .pull p{font-size:12pt;}
@@ -327,22 +331,22 @@
 <circle cx="123.8" cy="369.6" r="3.7" fill="#0d9488" opacity=".68" stroke="#fff" stroke-width="1"/>
 <circle cx="119.6" cy="238.4" r="3.6" fill="#0d9488" opacity=".68" stroke="#fff" stroke-width="1"/>
 <circle cx="132.2" cy="251.3" r="2.4" fill="#14161a" stroke="#fff" stroke-width="1"/>
-<text x="138.2" y="254.8" text-anchor="start" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">盛岡</text>
-<text x="152.0" y="297.8" text-anchor="start" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">矢巾・紫波</text>
+<text x="138.2" y="254.8" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">盛岡</text>
+<text x="152.0" y="297.8" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">矢巾・紫波</text>
 <circle cx="126.3" cy="350.4" r="2.4" fill="#14161a" stroke="#fff" stroke-width="1"/>
-<text x="132.3" y="353.9" text-anchor="start" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">花巻</text>
+<text x="132.3" y="353.9" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">花巻</text>
 <circle cx="128.7" cy="384.5" r="2.4" fill="#14161a" stroke="#fff" stroke-width="1"/>
-<text x="134.7" y="388.0" text-anchor="start" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">北上</text>
+<text x="134.7" y="388.0" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">北上</text>
 <circle cx="126.4" cy="410.7" r="2.4" fill="#14161a" stroke="#fff" stroke-width="1"/>
-<text x="121.4" y="422.7" text-anchor="end" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">金ケ崎</text>
+<text x="121.4" y="422.7" text-anchor="end" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">金ケ崎</text>
 <circle cx="132.7" cy="429.3" r="2.4" fill="#14161a" stroke="#fff" stroke-width="1"/>
-<text x="138.7" y="432.8" text-anchor="start" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">奥州（江刺）</text>
+<text x="138.7" y="432.8" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">奥州（江刺）</text>
 <circle cx="129.6" cy="494.7" r="2.4" fill="#14161a" stroke="#fff" stroke-width="1"/>
-<text x="135.6" y="498.2" text-anchor="start" font-family="Yu Gothic UI,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">一関</text>
-<text x="45.0" y="299.5" font-family="Yu Gothic UI" font-weight="700" font-size="9.5" fill="#9aa08e" letter-spacing="3" transform="rotate(-80 45.0 299.5)">奥羽山脈</text>
-<text x="250.3" y="267.8" font-family="Yu Gothic UI" font-weight="700" font-size="9.5" fill="#9aa08e" letter-spacing="3" transform="rotate(-85 250.3 267.8)">北上高地</text>
-<text x="372.5" y="299.5" font-family="Yu Gothic UI" font-weight="700" font-size="10" fill="#7fa2b8" letter-spacing="4" transform="rotate(-88 372.5 299.5)">太平洋</text>
-<text x="123.2" y="478.7" font-family="Yu Gothic UI" font-weight="800" font-size="8.6" fill="#1f9d61" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;">東北道</text>
+<text x="135.6" y="498.2" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="11" fill="#14161a" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;stroke-linejoin:round;">一関</text>
+<text x="45.0" y="299.5" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="9.5" fill="#9aa08e" letter-spacing="3" transform="rotate(-80 45.0 299.5)">奥羽山脈</text>
+<text x="250.3" y="267.8" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="9.5" fill="#9aa08e" letter-spacing="3" transform="rotate(-85 250.3 267.8)">北上高地</text>
+<text x="372.5" y="299.5" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="10" fill="#7fa2b8" letter-spacing="4" transform="rotate(-88 372.5 299.5)">太平洋</text>
+<text x="123.2" y="478.7" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="8.6" fill="#1f9d61" style="paint-order:stroke;stroke:#fbfbfa;stroke-width:3;">東北道</text>
 </svg>
       <div style="display:flex;gap:3.5mm;margin-top:1.4mm;font-size:6.8pt;font-weight:700;color:var(--ink2);flex-wrap:wrap;justify-content:center;">
         <span><i style="display:inline-block;width:2.6mm;height:2.6mm;border-radius:50%;background:var(--red);margin-right:1mm;"></i>賃貸型・竣工済</span>
@@ -401,36 +405,36 @@
 
   <div class="card" style="margin-top:4mm;">
     <div class="h"><span class="t">倉庫の建築着工は、高水準が続く</span><span class="s">岩手県内の倉庫着工床面積（年度・万㎡）</span></div>
-    <svg viewBox="0 0 700 168" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
-<line x1="34" y1="146.0" x2="690" y2="146.0" stroke="#e4e6ea" stroke-width="0.6"/>
-<text x="30" y="148.8" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">0万</text>
-<line x1="34" y1="102.0" x2="690" y2="102.0" stroke="#e4e6ea" stroke-width="0.6"/>
-<text x="30" y="104.8" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">6万</text>
-<line x1="34" y1="58.0" x2="690" y2="58.0" stroke="#e4e6ea" stroke-width="0.6"/>
-<text x="30" y="60.8" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">12万</text>
-<line x1="34" y1="14.0" x2="690" y2="14.0" stroke="#e4e6ea" stroke-width="0.6"/>
-<text x="30" y="16.8" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">18万</text>
-<line x1="34" y1="146.0" x2="690" y2="146.0" stroke="#14161a" stroke-width="1"/>
-<rect x="60.2" y="111.5" width="56.9" height="34.5" fill="#c3c6cc"/>
-<text x="88.7" y="107.5" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">4.7</text>
-<text x="88.7" y="161" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2020年度</text>
-<rect x="169.6" y="71.4" width="56.9" height="74.6" fill="#c3c6cc"/>
-<text x="198.0" y="67.4" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">10.2</text>
-<text x="198.0" y="161" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2021年度</text>
-<rect x="278.9" y="22.6" width="56.9" height="123.4" fill="#2563eb"/>
-<text x="307.3" y="18.6" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">16.8</text>
-<text x="307.3" y="161" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2022年度</text>
-<text x="307.3" y="6.6" text-anchor="middle" font-family="Yu Gothic UI" font-size="9" font-weight="700" fill="#2563eb">プロロジスパーク盛岡が着工</text>
-<rect x="388.2" y="91.7" width="56.9" height="54.3" fill="#c3c6cc"/>
-<text x="416.7" y="87.7" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">7.4</text>
-<text x="416.7" y="161" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2023年度</text>
-<rect x="497.6" y="62.1" width="56.9" height="83.9" fill="#c3c6cc"/>
-<text x="526.0" y="58.1" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">11.4</text>
-<text x="526.0" y="161" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2024年度</text>
-<rect x="606.9" y="34.3" width="56.9" height="111.7" fill="#2563eb"/>
-<text x="635.3" y="30.3" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">15.2</text>
-<text x="635.3" y="161" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2025年度</text>
-<text x="663.8" y="18.3" text-anchor="end" font-family="Yu Gothic UI" font-size="9" font-weight="700" fill="#2563eb">プロロジスパーク北上金ケ崎などが着工・竣工</text>
+    <svg viewBox="0 0 700 170" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+<line x1="34" y1="148.0" x2="690" y2="148.0" stroke="#e4e6ea" stroke-width="0.6"/>
+<text x="30" y="150.8" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">0万</text>
+<line x1="34" y1="105.3" x2="690" y2="105.3" stroke="#e4e6ea" stroke-width="0.6"/>
+<text x="30" y="108.1" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">6万</text>
+<line x1="34" y1="62.7" x2="690" y2="62.7" stroke="#e4e6ea" stroke-width="0.6"/>
+<text x="30" y="65.5" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">12万</text>
+<line x1="34" y1="20.0" x2="690" y2="20.0" stroke="#e4e6ea" stroke-width="0.6"/>
+<text x="30" y="22.8" text-anchor="end" font-family="Segoe UI" font-size="8.4" font-weight="600" fill="#62666e">18万</text>
+<line x1="34" y1="148.0" x2="690" y2="148.0" stroke="#14161a" stroke-width="1"/>
+<rect x="60.2" y="114.6" width="56.9" height="33.4" fill="#c3c6cc"/>
+<text x="88.7" y="110.6" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">4.7</text>
+<text x="88.7" y="163" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2020年度</text>
+<rect x="169.6" y="75.7" width="56.9" height="72.3" fill="#c3c6cc"/>
+<text x="198.0" y="71.7" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">10.2</text>
+<text x="198.0" y="163" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2021年度</text>
+<rect x="278.9" y="28.3" width="56.9" height="119.7" fill="#2563eb"/>
+<text x="307.3" y="24.3" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">16.8</text>
+<text x="307.3" y="163" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2022年度</text>
+<text x="307.3" y="12.3" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9" font-weight="700" fill="#2563eb">プロロジスパーク盛岡が着工</text>
+<rect x="388.2" y="95.3" width="56.9" height="52.7" fill="#c3c6cc"/>
+<text x="416.7" y="91.3" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">7.4</text>
+<text x="416.7" y="163" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2023年度</text>
+<rect x="497.6" y="66.6" width="56.9" height="81.4" fill="#c3c6cc"/>
+<text x="526.0" y="62.6" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">11.4</text>
+<text x="526.0" y="163" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2024年度</text>
+<rect x="606.9" y="39.7" width="56.9" height="108.3" fill="#2563eb"/>
+<text x="635.3" y="35.7" text-anchor="middle" font-family="Segoe UI" font-size="9.5" font-weight="700" fill="#14161a">15.2</text>
+<text x="635.3" y="163" text-anchor="middle" font-family="Segoe UI" font-size="8.6" font-weight="600" fill="#62666e">2025年度</text>
+<text x="663.8" y="23.7" text-anchor="end" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9" font-weight="700" fill="#2563eb">プロロジスパーク北上金ケ崎などが着工・竣工</text>
 </svg>
     <p class="cap">県内で着工された倉庫の延床面積（自社倉庫含む・国土交通省 建築着工統計）。青＝大型賃貸型の着工が重なった年度。2025年1月以降は用途分類の見直し・推計値導入後の値を含む。</p>
   </div>
@@ -508,20 +512,20 @@
 <text x="583" y="797" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="700" font-size="40" fill="#fff">15</text>
 <text x="1035" y="1987" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="700" font-size="46" fill="#fff">16</text>
 <rect x="635" y="1369" width="18" height="18" fill="#ffffff" stroke="#14161a" stroke-width="4"/>
-<text x="660" y="1387" text-anchor="start" font-family="Yu Gothic UI" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">北上駅</text>
+<text x="660" y="1387" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">北上駅</text>
 <rect x="623" y="1064" width="18" height="18" fill="#ffffff" stroke="#14161a" stroke-width="4"/>
-<text x="648" y="1082" text-anchor="start" font-family="Yu Gothic UI" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">村崎野駅</text>
+<text x="648" y="1082" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">村崎野駅</text>
 <rect x="492" y="1778" width="18" height="18" fill="#ffffff" stroke="#14161a" stroke-width="4"/>
-<text x="485" y="1796" text-anchor="end" font-family="Yu Gothic UI" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">六原駅</text>
+<text x="485" y="1796" text-anchor="end" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">六原駅</text>
 <rect x="581" y="1990" width="18" height="18" fill="#ffffff" stroke="#14161a" stroke-width="4"/>
-<text x="606" y="2008" text-anchor="start" font-family="Yu Gothic UI" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">金ケ崎駅</text>
+<text x="606" y="2008" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">金ケ崎駅</text>
 <rect x="643" y="163" width="18" height="18" fill="#ffffff" stroke="#14161a" stroke-width="4"/>
-<text x="668" y="181" text-anchor="start" font-family="Yu Gothic UI" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">花巻空港駅</text>
-<text x="449" y="1236" text-anchor="middle" font-family="Yu Gothic UI" font-weight="800" font-size="25" fill="#166534" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">北上江釣子IC</text>
-<text x="358" y="1443" text-anchor="middle" font-family="Yu Gothic UI" font-weight="800" font-size="25" fill="#166534" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">北上JCT</text>
+<text x="668" y="181" text-anchor="start" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="700" font-size="27" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">花巻空港駅</text>
+<text x="449" y="1236" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="25" fill="#166534" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">北上江釣子IC</text>
+<text x="358" y="1443" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="25" fill="#166534" style="paint-order:stroke;stroke:#ffffff;stroke-width:8;stroke-linejoin:round;">北上JCT</text>
 <circle cx="374" cy="1682" r="10" fill="#14161a" stroke="#fff" stroke-width="4"/>
 <line x1="374" y1="1682" x2="334" y2="1604" stroke="#14161a" stroke-width="3"/>
-<text x="334" y="1592" text-anchor="middle" font-family="Yu Gothic UI" font-weight="800" font-size="30" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:9;stroke-linejoin:round;">北上金ケ崎IC</text>
+<text x="334" y="1592" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-weight="800" font-size="30" fill="#14161a" style="paint-order:stroke;stroke:#ffffff;stroke-width:9;stroke-linejoin:round;">北上金ケ崎IC</text>
 </svg></div>
       <div style="display:flex;flex-direction:column;"><div style="display:flex;gap:4mm;flex-wrap:wrap;font-size:7.9pt;font-weight:700;color:var(--ink2);padding-bottom:2mm;margin-bottom:2mm;border-bottom:.15mm solid var(--hair2);"><span><i style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--red);margin-right:1.2mm;"></i>賃貸型・竣工済</span><span><i style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--orange);margin-right:1.2mm;"></i>建設中</span><span><i style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:#9ca3af;margin-right:1.2mm;"></i>計画</span><span><i style="display:inline-block;width:3mm;height:3mm;border-radius:50%;background:var(--blue);margin-right:1.2mm;"></i>自社・専用型</span></div>
 <div class="ix"><b>②</b> プロロジスパーク北上金ケ崎<span>金ケ崎・六原｜5.5万㎡｜2025</span></div>
@@ -582,7 +586,7 @@
     <div class="b"><div class="l">岩手雪運 協調融資（花巻）</div><div class="v">100<small>億円</small></div></div>
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:4mm;">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:3mm;">
     <div class="card">
       <div class="h"><span class="t">半導体 ── キオクシアと関連投資</span></div>
       <div style="font-size:8.4pt;line-height:1.7;color:var(--ink2);padding:.5mm 0;">
@@ -650,61 +654,61 @@
 <polyline points="66.2,110 66.2,93 100.2,74" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="66.2" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="100.2" y="30" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2024.11</text>
-<text x="100.2" y="48" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">DPL岩手北上III A区画</text>
-<text x="100.2" y="63" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">内覧会（約5,800㎡募集）</text>
+<text x="100.2" y="48" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">DPL岩手北上III A区画</text>
+<text x="100.2" y="63" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">内覧会（約5,800㎡募集）</text>
 <polyline points="145.6,120 145.6,137 100.2,140" fill="none" stroke="#14161a" stroke-width="0.9" opacity=".7"/>
 <circle cx="145.6" cy="115" r="5.2" fill="#14161a" stroke="#fff" stroke-width="1.4"/>
 <text x="100.2" y="154" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#14161a">2025.2</text>
-<text x="100.2" y="172" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
-<text x="100.2" y="187" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#62666e">約75%内定と発表</text>
+<text x="100.2" y="172" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
+<text x="100.2" y="187" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#62666e">約75%内定と発表</text>
 <polyline points="172.1,110 172.1,93 228.6,74" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="172.1" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="228.6" y="30" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2025.3</text>
-<text x="228.6" y="48" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
-<text x="228.6" y="63" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">「最終区画」内覧会</text>
+<text x="228.6" y="48" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
+<text x="228.6" y="63" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">「最終区画」内覧会</text>
 <polyline points="278.1,120 278.1,137 228.6,140" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="278.1" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="228.6" y="154" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2025.7</text>
-<text x="228.6" y="172" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
-<text x="228.6" y="187" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">内覧会（残り区画わずか）</text>
+<text x="228.6" y="172" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
+<text x="228.6" y="187" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">内覧会（残り区画わずか）</text>
 <polyline points="384.0,110 384.0,93 357.0,74" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="384.0" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="357.0" y="30" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2025.11</text>
-<text x="357.0" y="48" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">IIF岩手一関LC</text>
-<text x="357.0" y="63" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">内覧会（約70坪〜募集）</text>
+<text x="357.0" y="48" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">IIF岩手一関LC</text>
+<text x="357.0" y="63" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">内覧会（約70坪〜募集）</text>
 <polyline points="410.5,120 410.5,137 357.0,140" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="410.5" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="357.0" y="154" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2025.12</text>
-<text x="357.0" y="172" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク北上金ケ崎</text>
-<text x="357.0" y="187" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">竣工（約75%）・竣工内覧会</text>
+<text x="357.0" y="172" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク北上金ケ崎</text>
+<text x="357.0" y="187" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">竣工（約75%）・竣工内覧会</text>
 <polyline points="490.0,110 490.0,93 485.4,74" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="490.0" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="485.4" y="30" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2026.3</text>
-<text x="485.4" y="48" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
-<text x="485.4" y="63" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">オープンルーム（3/26・27）</text>
+<text x="485.4" y="48" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク盛岡</text>
+<text x="485.4" y="63" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">オープンルーム（3/26・27）</text>
 <polyline points="542.9,120 542.9,137 485.4,140" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="542.9" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="485.4" y="154" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2026.5</text>
-<text x="485.4" y="172" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">LOGIWITH北上金ケ崎</text>
-<text x="485.4" y="187" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">竣工・ほぼ全床募集中</text>
+<text x="485.4" y="172" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">LOGIWITH北上金ケ崎</text>
+<text x="485.4" y="187" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">竣工・ほぼ全床募集中</text>
 <polyline points="595.9,110 595.9,93 613.8,74" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="595.9" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="613.8" y="30" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2026.7</text>
-<text x="613.8" y="48" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク北上金ケ崎</text>
-<text x="613.8" y="63" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">内覧会（7/7・7/8）</text>
+<text x="613.8" y="48" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">プロロジスパーク北上金ケ崎</text>
+<text x="613.8" y="63" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">内覧会（7/7・7/8）</text>
 <polyline points="622.4,120 622.4,137 613.8,140" fill="none" stroke="#2563eb" stroke-width="0.9" opacity=".7"/>
 <circle cx="622.4" cy="115" r="5.2" fill="#2563eb" stroke="#fff" stroke-width="1.4"/>
 <text x="613.8" y="154" text-anchor="middle" font-family="Segoe UI" font-size="11" font-weight="800" fill="#2563eb">2026.8</text>
-<text x="613.8" y="172" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.6" font-weight="700" fill="#14161a">CBRE合同内覧会（8/5・8/6）</text>
-<text x="613.8" y="187" text-anchor="middle" font-family="Yu Gothic UI" font-size="9.2" font-weight="600" fill="#14161a">LOGIWITH＋DPL北上II</text>
+<text x="613.8" y="172" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.6" font-weight="700" fill="#14161a">CBRE合同内覧会（8/5・8/6）</text>
+<text x="613.8" y="187" text-anchor="middle" font-family="Yu Gothic UI,Meiryo,sans-serif" font-size="9.2" font-weight="600" fill="#14161a">LOGIWITH＋DPL北上II</text>
 </svg>
   </div>
 
-  <div class="tw2" style="margin-top:4mm;">
-    <div style="border-top:.45mm solid var(--ink);padding-top:3mm;">
-      <p style="font-size:9.8pt;line-height:1.95;color:var(--ink2);">
+  <div class="tw2" style="margin-top:3.2mm;">
+    <div style="border-top:.45mm solid var(--ink);padding-top:2.6mm;">
+      <p style="font-size:9.8pt;line-height:1.85;color:var(--ink2);">
       <b style="color:var(--ink);">建築費が上昇する一方で</b>、賃料は残床施設との競合もあって<b style="color:var(--ink);">借り手優位で推移しているとみられ</b>、建築費の上昇分を賃料に反映するのは容易ではない。</p>
-      <p style="font-size:9.8pt;line-height:1.95;color:var(--ink2);margin-top:2.6mm;">
+      <p style="font-size:9.8pt;line-height:1.85;color:var(--ink2);margin-top:2.6mm;">
       結果として、投資採算性の観点から<b style="color:var(--ink);">新規開発の難易度は高まりつつある</b>とみられる。実際、計画段階の案件には着工時期が未定・未公表のものもあり、倉庫着工（P2）の高水準がこの先も続くかは不透明だ。短中期は<b style="color:var(--ink);">新規供給より残床の消化が先行しやすい</b>とみられる。</p>
     </div>
     <div>
