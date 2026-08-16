@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>岩手県 不動産マーケットレポート｜第31回市場動向アンケート（令和8年4月）</title>
+<style>
+  :root{
+    --paper:#f8f6f1;
+    --ink:#15171c;
+    --ink2:#43464e;
+    --mute:#8b8e96;
+    --hair:#d9d5c9;
+    --hair2:#e9e6dc;
+    --red:#c73a26;
+    --blue:#24479f;
+    --gold:#a8842c;
+    --sand:#efe9da;
+    --sun:#c73a26;
+    --psun:#de7f35;
+    --flat:#e4dcc4;
+    --cloud:#a9bedf;
+    --rain:#5473b8;
+    --storm:#23407e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    font-family:"Yu Gothic UI","游ゴシック Medium",YuGothic,"Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    color:var(--ink);
+    background:#c9ccd2;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    font-feature-settings:"palt","kern";
+    font-weight:500;
+  }
+  .serif{font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN","MS PMincho",serif;}
+  .num{font-family:"Segoe UI",Verdana,sans-serif;font-variant-numeric:tabular-nums;}
+
+  .page{
+    width:210mm;min-height:297mm;
+    background:var(--paper);
+    padding:11mm 19mm 15mm 17mm;
+    margin:10mm auto;
+    position:relative;overflow:hidden;
+    box-shadow:0 18px 50px rgba(15,17,22,.22);
+  }
+
+  /* ============ Masthead ============ */
+  .mast{
+    display:flex;justify-content:space-between;align-items:baseline;
+    padding-bottom:2mm;border-bottom:.55mm solid var(--ink);
+    position:relative;margin-bottom:6mm;
+  }
+  .mast::after{content:"";position:absolute;left:0;right:0;bottom:-1.3mm;height:.2mm;background:var(--ink);}
+  .mast .a{font-size:8pt;letter-spacing:.28em;font-weight:800;}
+  .mast .a i{font-style:normal;color:var(--red);}
+  .mast .b{font-size:7pt;letter-spacing:.26em;color:var(--mute);font-weight:700;}
+
+  /* ============ Right edge index ============ */
+  .edge{
+    position:absolute;top:12mm;right:6.5mm;bottom:15mm;width:5mm;
+    display:flex;flex-direction:column;align-items:center;gap:3.5mm;
+  }
+  .edge .no{font-family:"Segoe UI";font-weight:300;font-size:11pt;color:var(--ink);}
+  .edge .bar{flex:1 1 0;min-height:0;width:.2mm;background:var(--hair);}
+  .edge .tx{writing-mode:vertical-rl;font-size:6.5pt;letter-spacing:.5em;color:var(--mute);font-weight:700;flex-shrink:0;}
+  .edge .dot{width:1.8mm;height:1.8mm;background:var(--red);border-radius:50%;}
+
+  /* ============ Footer ============ */
+  .foot{
+    position:absolute;left:17mm;right:19mm;bottom:7mm;
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:1.6mm;border-top:.2mm solid var(--hair);
+  }
+  .foot .l{font-size:6.8pt;letter-spacing:.16em;color:var(--mute);font-weight:700;}
+  .foot .r{font-family:"Segoe UI";font-size:8pt;font-weight:700;letter-spacing:.22em;color:var(--ink);}
+  .foot .r i{font-style:normal;color:var(--red);}
+
+  /* ============ Kicker & headline ============ */
+  .kick{display:flex;align-items:center;gap:3mm;margin-bottom:2.6mm;}
+  .kick .n{font-family:"Segoe UI";font-weight:300;font-size:23pt;line-height:1;color:var(--red);letter-spacing:-.02em;}
+  .kick .en{font-size:7.5pt;letter-spacing:.4em;font-weight:800;color:var(--ink);padding-top:1mm;}
+  .kick .ln{flex:1;height:.2mm;background:var(--hair);}
+  .kick .dt{font-size:7pt;letter-spacing:.18em;color:var(--mute);font-weight:700;}
+  .hl{
+    font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif;
+    font-size:20.5pt;font-weight:700;letter-spacing:.04em;line-height:1.3;
+  }
+  .hl em{font-style:normal;color:var(--red);}
+  .dek{margin-top:2.6mm;font-size:9.6pt;line-height:1.8;color:var(--ink2);max-width:160mm;}
+  .dek b{color:var(--ink);font-weight:800;}
+
+  /* ============ Legend ============ */
+  .lg{
+    display:flex;align-items:center;gap:4.5mm;margin:4.5mm 0 3.5mm;
+    padding:1.9mm 0;border-top:.4mm solid var(--ink);border-bottom:.15mm solid var(--hair);
+  }
+  .lg .t{font-size:7pt;letter-spacing:.28em;font-weight:800;}
+  .lg .i{display:flex;align-items:center;gap:1.5mm;font-size:7.5pt;font-weight:700;color:var(--ink2);white-space:nowrap;}
+  .lg .sw{width:3.2mm;height:3.2mm;border-radius:.5mm;}
+  .lg .di-note{margin-left:auto;font-size:6.8pt;color:var(--mute);font-weight:700;letter-spacing:.06em;}
+
+  /* ============ Map cards ============ */
+  .maps{display:grid;grid-template-columns:1fr 1fr;gap:5mm;}
+  .maps .iwate{width:84%;margin:0 auto;}
+  .mapc{background:#fff;border:.15mm solid var(--hair);padding:3mm 3.5mm 2.5mm;}
+  .mapc .h{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:1.6mm;padding-bottom:1.4mm;border-bottom:.15mm solid var(--hair2);
+  }
+  .mapc .h .t{font-size:9pt;font-weight:800;letter-spacing:.1em;}
+  .mapc .h .t::before{content:"";display:inline-block;width:2.2mm;height:2.2mm;background:var(--red);margin-right:1.8mm;}
+  .mapc.k2 .h .t::before{background:var(--blue);}
+  .mapc .h .s{font-size:6.8pt;letter-spacing:.18em;color:var(--mute);font-weight:700;}
+  .mapc .cap{font-size:7.2pt;color:var(--mute);font-weight:700;letter-spacing:.08em;text-align:center;margin-top:1.5mm;}
+
+  .iwate{width:100%;height:auto;display:block;}
+  .iwate .rg{stroke:var(--paper);stroke-width:1.5;}
+  .iwate .rg-label{
+    font-family:"Yu Gothic UI",sans-serif;font-weight:800;
+    font-size:10.5px;fill:#fff;text-anchor:middle;
+    paint-order:stroke;stroke:rgba(15,17,22,.5);stroke-width:2.6px;stroke-linejoin:round;
+  }
+  .iwate .rg-label.dark{fill:#15171c;stroke:#fff;stroke-width:2.4px;}
+  .iwate .rg-di{
+    font-family:"Segoe UI",Verdana,sans-serif;font-weight:700;
+    font-size:16.5px;fill:#fff;text-anchor:middle;
+    paint-order:stroke;stroke:rgba(15,17,22,.5);stroke-width:2.6px;stroke-linejoin:round;
+  }
+  .iwate .rg-di.dark{fill:#15171c;stroke:#fff;stroke-width:2.4px;}
+  .iwate .weather{font-size:23px;text-anchor:middle;filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.3));}
+
+  /* ============ DI table ============ */
+  .di{width:100%;border-collapse:collapse;margin-top:4mm;}
+  .di thead th{
+    font-size:7pt;letter-spacing:.12em;color:var(--mute);font-weight:800;
+    padding:0 1.5mm 1.5mm;border-bottom:.4mm solid var(--ink);text-align:right;white-space:nowrap;
+  }
+  .di thead th.l{text-align:left;}
+  .di thead th.gp{color:var(--ink);}
+  .di td{
+    padding:1.9mm 1.5mm;border-bottom:.15mm solid var(--hair2);
+    text-align:right;font-size:8.6pt;white-space:nowrap;
+  }
+  .di td.l{text-align:left;font-weight:800;letter-spacing:.06em;font-size:9pt;}
+  .di td.l .w{margin-right:1.6mm;font-size:10.5pt;}
+  .di .v{font-family:"Segoe UI",Verdana,sans-serif;font-weight:700;font-size:11pt;color:var(--ink);}
+  .di .v.p{color:var(--red);}
+  .di .v.m{color:var(--blue);}
+  .di .d{font-size:7pt;font-weight:700;color:var(--mute);display:inline-block;margin-left:1.2mm;width:11mm;text-align:left;}
+  .di .d.up{color:var(--red);}
+  .di .d.dn{color:var(--blue);}
+  .di .f{font-family:"Segoe UI";font-weight:600;font-size:9.4pt;color:var(--ink2);}
+  .di tr.hi td{background:#f8ece5;}
+  .di tr.hi td.l{color:var(--red);}
+  .di tr.all td{border-top:.4mm solid var(--ink);border-bottom:none;padding-top:2.2mm;}
+  .di td.sep{border-left:.15mm solid var(--hair);}
+  .di.cmp td{padding:1.7mm 1.2mm;}
+  .di.cmp .v{font-size:10pt;}
+  .di.cmp td.l{font-size:8.4pt;}
+  .di.cmp .f{font-size:8.8pt;}
+
+  /* ============ Pull quote ============ */
+  .pull{
+    margin-top:3.6mm;padding-top:2.6mm;border-top:.4mm solid var(--ink);
+    display:grid;grid-template-columns:9mm 1fr auto;gap:2.5mm;align-items:start;
+  }
+  .pull .qm{font-family:Georgia,serif;font-size:26pt;color:var(--red);line-height:.6;font-weight:700;}
+  .pull p{font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif;font-size:11pt;line-height:1.7;font-weight:600;}
+  .pull .at{font-size:7pt;letter-spacing:.22em;color:var(--mute);font-weight:800;white-space:nowrap;padding-top:1.5mm;}
+
+  /* ============ Big stats ============ */
+  .bigs{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:.4mm solid var(--ink);border-bottom:.15mm solid var(--hair);
+    margin:5mm 0;
+  }
+  .bigs .b{padding:3.5mm 4.5mm 3mm;border-left:.15mm solid var(--hair);}
+  .bigs .b:first-child{border-left:none;padding-left:.5mm;}
+  .bigs .l{font-size:7pt;letter-spacing:.22em;color:var(--mute);font-weight:800;}
+  .bigs .v{font-family:"Segoe UI";font-weight:300;font-size:30pt;line-height:1.15;letter-spacing:-.01em;color:var(--ink);}
+  .bigs .v small{font-size:9.5pt;color:var(--ink2);margin-left:1mm;font-weight:600;letter-spacing:0;}
+  .bigs .v.r{color:var(--red);}
+
+  /* ============ Chart card ============ */
+  .chc{background:#fff;border:.15mm solid var(--hair);padding:3mm 3.5mm 2mm;}
+  .chc .h{
+    display:flex;justify-content:space-between;align-items:baseline;
+    margin-bottom:1.6mm;padding-bottom:1.4mm;border-bottom:.15mm solid var(--hair2);
+  }
+  .chc .h .t{font-size:9pt;font-weight:800;letter-spacing:.1em;}
+  .chc .h .t::before{content:"";display:inline-block;width:2.2mm;height:2.2mm;background:var(--ink);margin-right:1.8mm;}
+  .chc .h .s{font-size:6.8pt;letter-spacing:.16em;color:var(--mute);font-weight:700;}
+  .chc.sm .h .t{font-size:8.2pt;}
+
+  /* ============ Bars ============ */
+  .brs{background:#fff;border:.15mm solid var(--hair);padding:3mm 3.5mm 2.5mm;}
+  .brow{display:grid;grid-template-columns:19mm 1fr 14mm;gap:2mm;align-items:center;padding:1.15mm 0;}
+  .brow .rn{font-size:8.2pt;font-weight:800;letter-spacing:.04em;}
+  .brow .tr{position:relative;height:5mm;background:var(--paper);}
+  .brow .fl{position:absolute;top:0;bottom:0;}
+  .brow .vv{font-family:"Segoe UI";font-weight:700;text-align:right;font-size:9.2pt;}
+  .brow.all{border-top:.3mm solid var(--ink);padding-top:1.7mm;margin-top:.9mm;}
+  .bleg{display:flex;gap:3.5mm;margin-top:2.3mm;font-size:6.8pt;font-weight:700;color:var(--mute);flex-wrap:wrap;}
+  .bleg span i{display:inline-block;width:2.4mm;height:2.4mm;margin-right:1mm;vertical-align:-1px;font-style:normal;}
+
+  /* ============ Voices ============ */
+  .vwrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm;margin-top:3.4mm;}
+  .vgroup h4{
+    font-size:8.6pt;letter-spacing:.26em;font-weight:800;color:var(--ink);
+    padding-bottom:1.5mm;border-bottom:.4mm solid var(--ink);
+    display:flex;align-items:baseline;justify-content:space-between;
+  }
+  .vgroup h4 .no{font-family:"Segoe UI";font-weight:300;color:var(--red);font-size:11.5pt;letter-spacing:0;}
+  .vq{padding:1.85mm 0;border-bottom:.15mm solid var(--hair2);}
+  .vq:last-child{border-bottom:none;}
+  .vq p{font-size:9.4pt;line-height:1.62;color:var(--ink);}
+  .vq p::before{content:"“";font-family:Georgia,serif;color:var(--red);margin-right:.6mm;font-weight:700;font-size:11.5pt;}
+  .vq .at{display:block;margin-top:1.1mm;font-size:7.4pt;letter-spacing:.2em;color:var(--mute);font-weight:800;}
+
+  .heroq{
+    margin-top:3.2mm;padding:3mm 6mm;
+    border-top:.55mm solid var(--ink);border-bottom:.15mm solid var(--hair);
+    display:grid;grid-template-columns:11mm 1fr;gap:3mm;align-items:start;
+    background:#fff;
+  }
+  .heroq .qm{font-family:Georgia,serif;font-size:34pt;color:var(--red);line-height:.65;font-weight:700;}
+  .heroq p{font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif;font-size:13.5pt;line-height:1.75;font-weight:700;letter-spacing:.02em;}
+  .heroq .at{display:block;margin-top:1.8mm;font-family:"Yu Gothic UI",sans-serif;font-size:7.6pt;letter-spacing:.24em;color:var(--mute);font-weight:800;}
+
+  .chips{display:flex;flex-wrap:wrap;gap:1.6mm;margin-top:1.8mm;}
+  .chips .c{
+    font-size:8.2pt;font-weight:700;color:var(--ink2);
+    border:.15mm solid var(--hair);background:#fff;
+    padding:1mm 2.6mm;border-radius:99px;letter-spacing:.03em;
+  }
+  .chips .c b{color:var(--ink);}
+
+  .concl{margin-top:3.2mm;background:var(--ink);color:#fff;padding:3.2mm 5.5mm 2.8mm;}
+  .concl .k{font-size:7.4pt;letter-spacing:.38em;font-weight:800;color:var(--gold);margin-bottom:1.6mm;}
+  .concl p.m{font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif;font-size:12.5pt;line-height:1.7;font-weight:700;letter-spacing:.02em;}
+  .concl p.m i{font-style:normal;color:#e8b04b;}
+  .concl .src{
+    margin-top:2.4mm;padding-top:1.9mm;border-top:.15mm solid rgba(255,255,255,.22);
+    font-size:7pt;color:rgba(255,255,255,.62);line-height:1.6;letter-spacing:.04em;
+  }
+  .concl .src b{color:rgba(255,255,255,.85);}
+
+  .note{
+    margin-top:3.5mm;padding:2.8mm 4.5mm;background:#fff;border:.15mm solid var(--hair);
+    border-left:.9mm solid var(--red);
+    font-size:8.8pt;line-height:1.75;color:var(--ink2);
+  }
+  .note h5{font-size:7.6pt;letter-spacing:.24em;font-weight:800;color:var(--ink);margin-bottom:1.2mm;}
+  .note b{color:var(--ink);}
+  .note em{font-style:normal;color:var(--red);font-weight:800;}
+
+  /* cover */
+  .cv-tag{font-size:7.6pt;letter-spacing:.36em;font-weight:800;color:var(--red);margin-bottom:3mm;}
+  .cv-hl{
+    font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif;
+    font-size:38pt;font-weight:700;line-height:1.28;letter-spacing:.02em;
+  }
+  .cv-hl em{font-style:normal;color:var(--red);}
+  .cv-dek{margin-top:3.5mm;font-size:10.5pt;line-height:1.85;color:var(--ink2);}
+  .cv-dek b{color:var(--ink);font-weight:800;}
+  .cv-grid{display:grid;grid-template-columns:1fr 1.02fr;gap:7mm;margin-top:5mm;align-items:start;}
+  .cv-map{background:#fff;border:.15mm solid var(--hair);padding:4mm 4mm 3mm;}
+  .cv-hi{border-top:.55mm solid var(--ink);}
+  .cv-hi .it{display:grid;grid-template-columns:10.5mm 1fr;gap:2mm;padding:3.1mm 0;border-bottom:.15mm solid var(--hair2);}
+  .cv-hi .it .n{font-family:"Segoe UI";font-weight:300;font-size:15.5pt;color:var(--red);line-height:1;}
+  .cv-hi .it h5{font-size:10pt;font-weight:800;letter-spacing:.04em;margin-bottom:1.2mm;}
+  .cv-hi .it p{font-size:8.2pt;line-height:1.65;color:var(--ink2);}
+  .cv-hi .it p b{color:var(--red);font-weight:800;}
+  .cv-src{margin-top:4mm;padding-top:2.5mm;border-top:.4mm solid var(--ink);display:flex;justify-content:space-between;align-items:flex-end;}
+  .cv-src .s{font-size:6.6pt;letter-spacing:.06em;color:var(--mute);line-height:1.8;font-weight:600;}
+  .cv-src .s b{color:var(--ink);}
+  .cv-logo{text-align:right;font-family:"Segoe UI";font-weight:800;font-size:13pt;letter-spacing:.06em;line-height:1;}
+  .cv-logo i{font-style:normal;color:var(--red);}
+  .cv-logo .s2{display:block;font-size:6pt;letter-spacing:.38em;color:var(--mute);margin-top:1.6mm;font-weight:700;}
+
+  .tw2{display:grid;grid-template-columns:1fr 1fr;gap:5mm;margin-top:4mm;}
+
+
+  /* ============ Publisher pages (GREO) ============ */
+  .page.pub{background:#f4eedd;}
+  .page.pub .foot{border-top-color:#ddd3ba;}
+  .page.pub .edge .bar{background:#ddd3ba;}
+  .kick .n.gd{color:var(--gold);}
+  .hl em.gd{color:var(--gold);}
+  .cr{display:grid;grid-template-columns:27mm 1fr;gap:6mm;padding:3.4mm 0;border-bottom:.15mm solid var(--hair2);align-items:start;}
+  .cr:last-child{border-bottom:none;}
+  .cr .y{font-family:"Segoe UI";font-weight:300;font-size:17pt;color:var(--ink);line-height:1;}
+  .cr .y small{display:block;font-size:6.8pt;color:var(--gold);letter-spacing:.22em;font-weight:800;margin-top:1.2mm;}
+  .cr h5{font-size:10pt;font-weight:800;letter-spacing:.05em;}
+  .cr h5 span{font-weight:600;font-size:8pt;color:var(--mute);margin-left:2mm;letter-spacing:.1em;}
+  .cr p{font-size:8.8pt;line-height:1.75;color:var(--ink2);margin-top:1.2mm;}
+  .cr p b{color:var(--ink);}
+  .str3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6mm;margin-top:1mm;}
+  .str3 .s{border-top:.45mm solid var(--ink);padding-top:2.6mm;}
+  .str3 .s .no{font-family:"Segoe UI";font-weight:300;font-size:14pt;color:var(--gold);line-height:1;}
+  .str3 .s h5{font-size:10pt;font-weight:800;line-height:1.5;margin:1.4mm 0 1.6mm;letter-spacing:.04em;}
+  .str3 .s p{font-size:8.3pt;line-height:1.7;color:var(--ink2);}
+  .str3 .s p b{color:var(--ink);}
+  .firmbx{margin-top:4.5mm;background:#fff;border:.15mm solid var(--hair);padding:3.5mm 5mm;display:grid;grid-template-columns:auto 1fr;gap:7mm;align-items:center;}
+  .firmbx .lg2{font-family:"Segoe UI",Verdana,sans-serif;font-weight:800;font-size:21pt;letter-spacing:.06em;color:var(--ink);line-height:1;}
+  .firmbx .lg2 i{font-style:normal;color:var(--gold);}
+  .firmbx .lg2 small{display:block;font-size:6.4pt;letter-spacing:.3em;color:var(--mute);font-weight:700;margin-top:1.6mm;}
+  .firmbx dl{display:grid;grid-template-columns:auto 1fr;gap:.8mm 4mm;font-size:8.2pt;}
+  .firmbx dt{font-family:"Segoe UI";font-size:6.8pt;letter-spacing:.2em;color:var(--gold);font-weight:800;padding-top:.6mm;}
+  .firmbx dd{color:var(--ink2);font-weight:600;}
+  .coreblk{margin-top:4mm;background:var(--ink);color:#fff;padding:3.8mm 6mm 3.4mm;position:relative;}
+  .coreblk::before{content:"";position:absolute;top:0;left:0;right:0;height:1.3mm;background:var(--gold);}
+  .coreblk .tag{display:inline-block;background:var(--gold);color:var(--ink);padding:.8mm 3mm;font-size:7.4pt;font-weight:800;letter-spacing:.24em;margin-bottom:2.6mm;}
+  .coreblk h3{font-family:"Yu Mincho",YuMincho,"Hiragino Mincho ProN",serif;font-size:17pt;font-weight:700;letter-spacing:.1em;}
+  .coreblk .en{font-size:7pt;color:var(--gold);letter-spacing:.26em;font-weight:800;margin-top:1.2mm;}
+  .coreblk p{font-size:9pt;line-height:1.82;color:#d9dbe0;margin-top:2.4mm;max-width:158mm;}
+  .coreblk p b{color:#fff;}
+  .coreblk .cta{margin-top:2.8mm;display:inline-block;padding:1.4mm 4mm;border:.2mm solid var(--gold);color:var(--gold);font-size:8.6pt;letter-spacing:.2em;font-weight:800;}
+  .svc{display:grid;grid-template-columns:1fr 25mm;gap:6mm;border-top:.45mm solid var(--ink);padding:2.8mm 0 2.4mm;align-items:start;}
+  .svc .cat{font-size:7pt;letter-spacing:.26em;font-weight:800;color:var(--gold);}
+  .svc .cat .no{font-family:"Segoe UI";font-weight:300;font-size:11pt;color:var(--ink);margin-right:2mm;letter-spacing:0;}
+  .svc h5{font-size:11pt;font-weight:800;letter-spacing:.05em;margin:1.2mm 0 1.4mm;}
+  .svc p{font-size:8.6pt;line-height:1.7;color:var(--ink2);}
+  .svc p b{color:var(--ink);}
+  .qrbx{text-align:center;}
+  .qrbx img{width:20mm;height:20mm;padding:1mm;background:#fff;border:.15mm solid var(--ink);display:block;margin:0 auto 1mm;}
+  .qrbx .c1{font-size:6.6pt;color:var(--gold);letter-spacing:.14em;font-weight:800;}
+  .qrbx .c2{font-size:6.6pt;color:var(--ink2);font-weight:600;word-break:break-all;line-height:1.4;}
+  .qrbx .nt{font-size:7.2pt;color:var(--mute);font-weight:700;line-height:1.5;letter-spacing:.08em;padding-top:4mm;}
+  .ctc{margin-top:3.6mm;background:#fff;border:.15mm solid var(--hair);border-left:1.1mm solid var(--gold);padding:3.6mm 5.5mm;}
+  .ctc .h{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:1.7mm;margin-bottom:2mm;border-bottom:.15mm solid var(--hair2);}
+  .ctc .h .nm{font-size:10.5pt;font-weight:800;letter-spacing:.08em;}
+  .ctc .h .tg{font-size:7pt;letter-spacing:.26em;color:var(--gold);font-weight:800;}
+  .ctc .row{display:grid;grid-template-columns:15mm 1fr;gap:4mm;font-size:9.2pt;font-weight:700;color:var(--ink);padding:.6mm 0;align-items:baseline;}
+  .ctc .row .lb{font-family:"Segoe UI";font-size:7pt;letter-spacing:.24em;color:var(--gold);font-weight:800;border-right:.15mm solid var(--hair);padding-right:3mm;}
+
+  @page{size:A4 portrait;margin:0;}
+  @media print{
+    html,body{background:var(--paper);}
+    .page{margin:0;box-shadow:none;height:297mm;min-height:0;page-break-after:always;break-after:page;}
+    .page:last-of-type{page-break-after:auto;}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute;" aria-hidden="true">
+  <defs>
+    <path id="iw-cn" d="M264.9 334.7L233.6 307.2L221.1 303.9L218.9 297.0L203.5 298.0L201.4 295.2L205.2 293.2L203.9 288.6L181.1 270.3L198.6 254.6L195.3 242.6L198.8 233.1L214.7 231.4L220.5 217.8L227.7 216.3L221.9 202.5L222.6 195.2L217.1 194.0L217.4 188.4L225.0 185.1L233.6 187.5L236.5 183.9L235.5 179.4L242.9 170.7L228.4 146.0L227.1 133.3L217.7 129.1L210.3 114.2L215.1 109.1L218.9 91.5L226.3 82.4L239.4 84.3L248.1 79.2L248.2 71.4L241.9 68.7L241.4 58.1L238.2 55.7L248.5 43.2L242.8 42.2L240.8 30.4L265.6 14.0L286.7 46.0L288.0 54.9L300.4 76.8L302.9 87.9L296.0 88.6L293.9 92.9L295.7 93.7L297.4 96.8L292.8 96.3L307.2 103.4L313.0 111.2L301.3 120.9L302.4 133.1L313.4 141.7L320.0 153.5L327.3 153.7L332.4 162.0L333.7 174.0L329.2 174.7L328.4 182.3L337.6 197.5L337.9 210.9L341.0 213.7L339.1 223.8L344.2 227.9L340.3 233.6L344.2 235.6L336.0 242.1L340.2 244.6L335.1 255.0L339.8 256.6L335.8 266.9L339.1 268.7L334.4 271.3L336.1 272.5L337.5 274.6L334.8 272.5L336.2 275.5L329.8 284.0L330.5 287.6L333.1 288.0L349.1 265.8L348.6 278.6L351.6 280.6L349.4 281.4L349.8 291.6L357.2 291.8L360.9 300.5L355.8 305.0L357.4 308.2L354.1 305.4L351.3 306.1L349.5 313.8L345.7 315.1L345.9 322.8L337.1 320.9L332.0 324.2L334.0 331.9L338.3 334.8L342.0 330.5L344.3 332.8L345.3 326.5L355.5 320.2L358.2 324.4L352.5 332.4L354.1 338.8L350.1 342.2L345.7 338.8L344.5 343.8L339.2 344.4L337.2 338.5L331.7 347.3L316.8 347.1L304.1 328.2L298.5 326.2L289.9 310.9L281.6 306.1L270.8 318.1L274.9 332.4L264.9 334.7Z"/>
+    <path id="iw-cs" d="M212.7 477.9L211.3 460.5L216.0 456.2L216.8 449.6L209.0 440.0L199.6 439.5L192.6 422.1L193.9 416.3L190.0 414.0L198.2 410.0L206.6 413.0L215.9 407.5L215.5 399.7L221.6 399.7L226.1 395.1L231.0 396.8L236.2 391.6L243.8 396.7L253.9 394.0L259.7 396.9L269.2 389.4L265.6 380.3L268.7 374.2L260.2 372.1L259.0 355.5L262.6 345.4L281.2 341.8L274.9 338.4L270.4 322.2L272.4 314.2L278.8 311.9L280.1 306.5L289.9 310.9L298.5 326.2L304.1 328.2L316.8 347.1L331.7 347.4L328.0 352.1L330.5 356.5L335.0 354.1L332.7 361.1L326.4 363.7L322.6 361.0L318.0 367.0L319.3 370.2L335.8 367.5L342.4 362.7L335.9 374.7L315.6 377.8L325.0 383.4L325.9 388.2L315.9 387.2L319.5 392.6L316.3 395.4L324.1 398.6L328.1 395.2L335.5 394.1L336.1 395.4L329.5 397.3L332.2 402.8L330.3 405.1L324.7 403.3L319.8 408.9L315.6 407.7L317.2 409.2L316.2 411.3L310.6 408.5L310.6 413.3L324.2 417.5L315.6 424.6L306.5 424.2L303.0 427.6L312.0 432.5L312.3 437.3L318.8 435.9L323.8 440.8L314.0 447.3L309.0 441.0L297.0 438.6L296.4 445.3L300.2 446.6L300.0 450.1L312.8 453.4L297.8 455.5L307.2 464.8L294.3 466.3L293.3 460.2L289.9 465.3L286.6 463.0L284.2 468.4L278.0 467.1L279.9 457.7L277.1 451.5L272.2 466.3L277.6 469.1L280.6 477.2L272.6 475.1L274.2 479.6L269.0 483.5L274.2 484.3L276.8 489.1L270.8 493.6L262.0 481.5L265.3 474.5L261.9 472.1L252.1 473.1L252.5 483.4L237.4 475.2L226.6 476.7L223.2 473.1L218.5 474.7L216.9 480.9L212.7 477.9Z"/>
+    <path id="iw-ce" d="M92.3 300.8L88.2 305.2L79.3 301.6L70.2 309.8L67.9 308.3L63.7 289.6L48.7 282.7L55.3 267.8L55.4 255.7L43.7 241.1L50.8 237.8L61.7 222.5L55.1 215.3L46.6 212.8L46.2 197.5L56.2 192.9L62.9 199.4L69.3 195.4L61.6 169.9L63.5 142.9L60.7 133.5L68.8 125.7L69.7 120.7L66.3 114.8L70.3 106.9L64.4 102.4L72.5 95.8L73.3 89.0L84.3 84.8L84.1 80.5L87.8 78.3L93.8 87.1L105.3 86.6L105.1 103.6L108.0 107.7L124.7 113.5L130.1 126.4L136.0 127.3L144.5 137.3L154.7 137.8L169.0 146.9L171.8 144.2L169.6 137.8L175.2 140.3L187.8 135.3L181.9 127.0L183.3 115.8L179.1 114.1L188.2 108.6L195.9 108.9L192.8 113.7L200.1 123.0L206.4 124.1L211.7 119.7L220.3 132.0L227.1 133.3L228.4 146.0L242.9 170.7L235.5 179.4L236.5 183.9L233.6 187.5L225.0 185.1L216.6 189.8L217.1 194.0L222.6 195.2L221.9 202.5L227.7 216.3L220.5 217.8L214.7 231.4L198.8 233.1L195.3 242.6L198.6 254.6L181.1 270.3L184.0 275.5L198.3 283.1L205.2 293.2L172.5 292.8L168.6 300.1L171.0 312.5L166.6 320.7L150.6 318.8L140.2 312.4L125.0 313.2L119.1 311.0L117.5 305.9L105.2 307.6L92.3 300.8Z"/>
+    <path id="iw-in" d="M169.0 146.9L154.7 137.8L144.5 137.3L136.0 127.3L130.1 126.4L124.7 113.5L108.0 107.7L105.1 103.6L105.3 84.9L124.2 75.7L123.2 67.7L132.5 61.5L152.2 56.8L176.0 38.6L184.5 51.8L192.0 48.3L195.9 40.3L198.3 43.5L206.7 37.5L216.1 37.4L229.7 46.6L240.8 38.2L248.5 43.2L238.2 55.3L242.9 63.5L241.9 68.7L248.2 71.4L248.0 79.3L239.4 84.3L226.3 82.4L218.9 91.5L215.1 109.1L210.4 113.7L211.7 119.7L206.6 124.0L199.6 122.6L192.9 113.8L195.7 108.6L181.5 111.4L179.1 114.1L183.3 115.8L181.9 127.0L187.8 135.3L175.2 140.3L169.6 137.8L171.8 144.2L169.0 146.9Z"/>
+    <path id="iw-is" d="M78.3 500.5L55.9 485.4L43.4 487.3L41.1 473.9L52.4 455.8L49.8 454.6L50.5 449.3L38.3 446.6L40.9 439.4L39.1 436.4L42.6 434.6L37.4 430.2L43.6 420.7L51.9 416.7L41.3 411.2L40.9 406.3L47.1 398.3L29.8 387.5L29.7 379.9L23.9 378.9L27.5 367.9L19.5 357.1L20.3 352.4L14.0 350.0L15.3 342.3L21.8 339.3L21.0 329.0L31.4 321.6L28.8 315.7L35.6 303.9L32.7 294.7L38.7 293.0L45.5 282.4L63.7 289.6L69.5 309.6L79.2 301.7L87.9 305.3L92.0 300.7L103.0 307.1L117.5 305.9L119.1 311.0L124.8 313.2L140.2 312.4L150.6 318.8L163.6 320.7L167.8 320.0L171.0 312.5L168.3 307.6L170.9 294.0L197.4 291.0L203.6 298.1L219.2 297.2L221.1 303.9L238.9 311.0L254.2 329.6L259.9 329.1L265.3 334.8L274.9 332.4L274.9 338.4L281.2 341.7L262.6 345.4L259.0 355.5L260.2 372.1L268.7 374.2L265.6 380.3L269.2 389.4L259.7 396.9L253.9 394.0L243.8 396.7L236.2 391.6L231.0 396.8L226.1 395.1L221.6 399.7L215.5 399.7L215.9 407.5L206.6 413.0L198.2 410.0L190.0 414.0L193.9 416.3L192.6 422.1L199.6 439.5L209.0 440.0L216.8 449.6L211.2 461.9L214.6 470.3L212.3 476.9L219.5 488.1L219.0 501.5L209.0 513.3L212.7 519.4L208.7 525.5L211.0 532.6L203.7 534.0L206.2 542.0L202.1 546.4L198.9 547.6L200.2 541.8L195.0 537.4L180.5 535.2L176.0 530.0L173.2 539.5L165.4 538.4L161.5 549.8L151.5 553.7L146.6 544.8L133.0 541.0L133.6 533.6L129.0 529.3L124.3 530.0L124.4 525.6L128.9 526.0L134.6 519.6L132.9 512.8L121.6 509.5L107.9 513.1L103.8 510.0L96.3 513.8L88.5 503.1L78.3 500.5Z"/>
+  </defs>
+</svg>
+
+
+<!-- ================= PAGE 1 / COVER ================= -->
+<section class="page">
+  <div class="mast">
+    <div class="a">IWATE REAL ESTATE <i>MARKET REPORT</i></div>
+    <div class="b">VOL.31 — RELEASE 2026.08</div>
+  </div>
+  <div class="edge"><span class="no num">00</span><span class="bar"></span><span class="tx">COVER</span><span class="dot"></span></div>
+
+  <p class="cv-tag">岩手県不動産市場動向アンケート｜第31回調査（令和8年4月1日時点）</p>
+  <h1 class="cv-hl">岩手の不動産は、<br>いま<em>晴れ</em>か、<em>雨</em>か。</h1>
+  <p class="cv-dek">
+    県内で取引・賃貸・鑑定に携わる<b>不動産のプロフェッショナル215社</b>が答えた、半年ごとの定点観測。<br>
+    5エリアの「実感」と「予測」を、岩手県地図と天気マークで読み解く。
+  </p>
+
+  <div class="bigs">
+    <div class="b"><div class="l">回答社数</div><div class="v">215<small>社 / 728社</small></div></div>
+    <div class="b"><div class="l">回収率</div><div class="v">29.5<small>%</small></div></div>
+    <div class="b"><div class="l">住宅地価格DI・県央部</div><div class="v r">+11.2<small>実感</small></div></div>
+    <div class="b"><div class="l">同・沿岸南部</div><div class="v" style="color:var(--blue);">−35.0<small>実感</small></div></div>
+  </div>
+
+  <div class="cv-grid">
+    <div class="cv-map">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1.6mm;">
+        <span style="font-size:8.5pt;font-weight:800;letter-spacing:.12em;">住宅地 価格DI（実感）</span>
+        <span style="font-size:6.8pt;letter-spacing:.18em;color:var(--mute);font-weight:700;">R8.4.1</span>
+      </div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#5473b8"/>
+        <use href="#iw-cn" class="rg" fill="#23407e"/>
+        <use href="#iw-ce" class="rg" fill="#c73a26"/>
+        <use href="#iw-cs" class="rg" fill="#23407e"/>
+        <use href="#iw-is" class="rg" fill="#a9bedf"/>
+        <text class="weather" x="186" y="78">🌧️</text>
+        <text class="weather" x="282" y="170">⛈️</text>
+        <text class="weather" x="120" y="195">☀️</text>
+        <text class="weather" x="294" y="385">⛈️</text>
+        <text class="weather" x="120" y="425">☁️</text>
+        <text class="rg-label" x="186" y="110">内陸北部</text>
+        <text class="rg-di" x="186" y="129">−14.3</text>
+        <text class="rg-label" x="282" y="200">沿岸北部</text>
+        <text class="rg-di" x="282" y="219">−26.5</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">+11.2</text>
+        <text class="rg-label" x="294" y="415">沿岸南部</text>
+        <text class="rg-di" x="294" y="434">−35.0</text>
+        <text class="rg-label dark" x="120" y="455">内陸南部</text>
+        <text class="rg-di dark" x="120" y="474">−3.3</text>
+      </svg>
+      <p style="font-size:7pt;color:var(--mute);font-weight:700;letter-spacing:.08em;text-align:center;margin-top:1.6mm;">雨マークほど、市場は冷えている ｜ DI＝「上昇」−「下落」の回答割合（±100）</p>
+    </div>
+
+    <div>
+      <div class="cv-hi">
+        <div class="it">
+          <span class="n num">01</span>
+          <div>
+            <h5>価格のプラスは、県央部だけ。</h5>
+            <p>住宅地・商業地とも価格DIのプラスは実感・予測を通じて県央部のみ。住宅地は+5.9→<b>+11.2へ再加速</b>し、「県央一強」がより鮮明になった。</p>
+          </div>
+        </div>
+        <div class="it">
+          <span class="n num">02</span>
+          <div>
+            <h5>取引は、全域で減っている。</h5>
+            <p>取引件数DIは住宅地・商業地とも<b>全5エリアでマイナス継続</b>。価格が上がる県央部でも、取引の「量」は細っている。</p>
+          </div>
+        </div>
+        <div class="it">
+          <span class="n num">03</span>
+          <div>
+            <h5>中古住宅に、明かりが灯る。</h5>
+            <p>中古住宅価格DIは県央部+8.8に加え<b>内陸北部が7期ぶりのプラス転換（+7.1）</b>。新築価格の高騰が、中古への需要シフトを生んでいる。</p>
+          </div>
+        </div>
+        <div class="it" style="border-bottom:none;">
+          <span class="n num">04</span>
+          <div>
+            <h5>賃貸には、底打ちの気配。</h5>
+            <p>住居系賃料の全域DIは<b>+0.8とプラス転換</b>。沿岸南部の入居率は−40.0→<b>+15.0へ急回復</b>した。売買より先に、賃貸が動き出した可能性。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-src">
+    <div class="s">
+      <b>調査概要</b>　宅建協会・全日本不動産協会岩手県本部の会員728社対象／3協会共同・半年ごと実施／回答215社（回収率29.5%）／5エリア33市町村<br>
+      <b>出典</b>　第31回調査（令和8年4月1日時点・令和8年7月公表）　<b>主催</b>　岩手県宅地建物取引業協会・全日本不動産協会岩手県本部・岩手県不動産鑑定士協会
+    </div>
+    <div class="cv-logo">IWATE <i>RE</i> REPORT<span class="s2">SEMIANNUAL — NO.31</span></div>
+  </div>
+  <div class="foot"><span class="l">岩手県不動産市場動向アンケート 第31回調査</span><span class="r num">01 <i>/</i> 06</span></div>
+</section>
+
+
+<!-- ================= PAGE 2 / RESIDENTIAL ================= -->
+<section class="page">
+  <div class="mast">
+    <div class="a">IWATE REAL ESTATE <i>MARKET REPORT</i></div>
+    <div class="b">RESIDENTIAL LAND</div>
+  </div>
+  <div class="edge"><span class="no num">01</span><span class="bar"></span><span class="tx">RESIDENTIAL ─ 住宅地</span><span class="dot"></span></div>
+
+  <div class="kick"><span class="n num">01</span><span class="en">RESIDENTIAL LAND</span><span class="ln"></span><span class="dt">実感 R8.4.1 ／ 予測 R8.10.1</span></div>
+  <h2 class="hl">住宅地 ── <em>県央だけが、晴れている。</em></h2>
+  <p class="dek">価格DIのプラスは実感・予測とも<b>県央部のみ</b>。実感は+5.9→<b>+11.2</b>へ上げ幅が拡大した。一方で取引件数DIは<b>全エリアでマイナス</b>が続き、内陸北部の件数予測は<b>−58.3</b>と今回調査で最も厳しい見通しとなった。</p>
+
+  <div class="lg">
+    <span class="t">DI凡例</span>
+    <span class="i"><span class="sw" style="background:var(--sun);"></span>☀️ +10以上</span>
+    <span class="i"><span class="sw" style="background:var(--psun);"></span>🌤️ +3〜+10</span>
+    <span class="i"><span class="sw" style="background:var(--flat);"></span>⛅ −3〜+3</span>
+    <span class="i"><span class="sw" style="background:var(--cloud);"></span>☁️ −10〜−3</span>
+    <span class="i"><span class="sw" style="background:var(--rain);"></span>🌧️ −25〜−10</span>
+    <span class="i"><span class="sw" style="background:var(--storm);"></span>⛈️ −25未満</span>
+  </div>
+
+  <div class="maps">
+    <div class="mapc">
+      <div class="h"><span class="t">価格DI（実感）</span><span class="s">R8.4.1</span></div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#5473b8"/>
+        <use href="#iw-cn" class="rg" fill="#23407e"/>
+        <use href="#iw-ce" class="rg" fill="#c73a26"/>
+        <use href="#iw-cs" class="rg" fill="#23407e"/>
+        <use href="#iw-is" class="rg" fill="#a9bedf"/>
+        <text class="weather" x="186" y="78">🌧️</text>
+        <text class="weather" x="282" y="170">⛈️</text>
+        <text class="weather" x="120" y="195">☀️</text>
+        <text class="weather" x="294" y="385">⛈️</text>
+        <text class="weather" x="120" y="425">☁️</text>
+        <text class="rg-label" x="186" y="110">内陸北部</text>
+        <text class="rg-di" x="186" y="129">−14.3</text>
+        <text class="rg-label" x="282" y="200">沿岸北部</text>
+        <text class="rg-di" x="282" y="219">−26.5</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">+11.2</text>
+        <text class="rg-label" x="294" y="415">沿岸南部</text>
+        <text class="rg-di" x="294" y="434">−35.0</text>
+        <text class="rg-label dark" x="120" y="455">内陸南部</text>
+        <text class="rg-di dark" x="120" y="474">−3.3</text>
+      </svg>
+    </div>
+    <div class="mapc k2">
+      <div class="h"><span class="t">取引件数DI（実感）</span><span class="s">R8.4.1</span></div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#23407e"/>
+        <use href="#iw-cn" class="rg" fill="#23407e"/>
+        <use href="#iw-ce" class="rg" fill="#5473b8"/>
+        <use href="#iw-cs" class="rg" fill="#5473b8"/>
+        <use href="#iw-is" class="rg" fill="#5473b8"/>
+        <text class="weather" x="186" y="78">⛈️</text>
+        <text class="weather" x="282" y="170">⛈️</text>
+        <text class="weather" x="120" y="195">🌧️</text>
+        <text class="weather" x="294" y="385">🌧️</text>
+        <text class="weather" x="120" y="425">🌧️</text>
+        <text class="rg-label" x="186" y="110">内陸北部</text>
+        <text class="rg-di" x="186" y="129">−33.3</text>
+        <text class="rg-label" x="282" y="200">沿岸北部</text>
+        <text class="rg-di" x="282" y="219">−28.1</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">−15.4</text>
+        <text class="rg-label" x="294" y="415">沿岸南部</text>
+        <text class="rg-di" x="294" y="434">−15.0</text>
+        <text class="rg-label" x="120" y="455">内陸南部</text>
+        <text class="rg-di" x="120" y="474">−21.3</text>
+      </svg>
+    </div>
+  </div>
+
+  <table class="di">
+    <thead>
+      <tr>
+        <th class="l">エリア</th>
+        <th class="gp">価格・実感</th><th>前回比</th><th>予測</th>
+        <th class="gp" style="padding-left:6mm;">件数・実感</th><th>前回比</th><th>予測</th>
+      </tr>
+    </thead>
+    <tr><td class="l"><span class="w">⛈️</span>沿岸北部</td>
+      <td><span class="v m">−26.5</span></td><td><span class="d">±0.0</span></td><td><span class="f">−35.3</span></td>
+      <td class="sep" style="padding-left:6mm;"><span class="v m">−28.1</span></td><td><span class="d up">▲ +0.5</span></td><td><span class="f">−31.3</span></td></tr>
+    <tr><td class="l"><span class="w">⛈️</span>沿岸南部</td>
+      <td><span class="v m">−35.0</span></td><td><span class="d dn">▼ −1.7</span></td><td><span class="f">−35.0</span></td>
+      <td class="sep" style="padding-left:6mm;"><span class="v m">−15.0</span></td><td><span class="d up">▲ +7.7</span></td><td><span class="f">−30.0</span></td></tr>
+    <tr class="hi"><td class="l"><span class="w">☀️</span>県央部</td>
+      <td><span class="v p">+11.2</span></td><td><span class="d up">▲ +5.3</span></td><td><span class="f" style="color:var(--red);">+3.8</span></td>
+      <td class="sep" style="padding-left:6mm;"><span class="v m">−15.4</span></td><td><span class="d up">▲ +2.9</span></td><td><span class="f">−19.5</span></td></tr>
+    <tr><td class="l"><span class="w">🌧️</span>内陸北部</td>
+      <td><span class="v m">−14.3</span></td><td><span class="d up">▲ +2.4</span></td><td><span class="f">−14.3</span></td>
+      <td class="sep" style="padding-left:6mm;"><span class="v m">−33.3</span></td><td><span class="d">±0.0</span></td><td><span class="f">−58.3</span></td></tr>
+    <tr><td class="l"><span class="w">☁️</span>内陸南部</td>
+      <td><span class="v m">−3.3</span></td><td><span class="d dn">▼ −1.9</span></td><td><span class="f">−6.7</span></td>
+      <td class="sep" style="padding-left:6mm;"><span class="v m">−21.3</span></td><td><span class="d dn">▼ −2.6</span></td><td><span class="f">−25.0</span></td></tr>
+    <tr class="all"><td class="l">県内全域</td>
+      <td><span class="v m">−0.5</span></td><td><span class="d up">▲ +1.4</span></td><td><span class="f">−5.9</span></td>
+      <td class="sep" style="padding-left:6mm;"><span class="v m">−19.2</span></td><td><span class="d up">▲ +0.6</span></td><td><span class="f">−24.1</span></td></tr>
+  </table>
+
+  <div class="pull">
+    <span class="qm">“</span>
+    <p>物価高で住宅が高騰し、住宅ローンが通らず、家が建たないため土地が売れない予想。</p>
+    <span class="at">内陸南部｜遠野市</span>
+  </div>
+
+  <div class="foot"><span class="l">岩手県不動産市場動向アンケート 第31回調査</span><span class="r num">02 <i>/</i> 06</span></div>
+</section>
+
+
+<!-- ================= PAGE 3 / COMMERCIAL & EXISTING ================= -->
+<section class="page">
+  <div class="mast">
+    <div class="a">IWATE REAL ESTATE <i>MARKET REPORT</i></div>
+    <div class="b">COMMERCIAL &amp; EXISTING HOMES</div>
+  </div>
+  <div class="edge"><span class="no num">02</span><span class="bar"></span><span class="tx">COMMERCIAL ─ 商業地・中古住宅</span><span class="dot"></span></div>
+
+  <div class="kick"><span class="n num">02</span><span class="en">COMMERCIAL &amp; EXISTING HOMES</span><span class="ln"></span><span class="dt">実感 R8.4.1 ／ 予測 R8.10.1</span></div>
+  <h2 class="hl">商業地は<em>県央の独走</em>、中古住宅は<em>北へ広がる明かり</em>。</h2>
+  <p class="dek">商業地は県央部<b>+12.3</b>が独走する一方、前回0.0の内陸北部が<b>−8.3へ転落</b>。中古住宅は県央部+8.8に加え<b>内陸北部が+7.1と7期ぶりのプラス転換</b>を果たし、件数も広く改善した。新築高騰による<b>中古シフト</b>が数字に表れている。</p>
+
+  <div class="lg">
+    <span class="t">DI凡例</span>
+    <span class="i"><span class="sw" style="background:var(--sun);"></span>☀️ +10以上</span>
+    <span class="i"><span class="sw" style="background:var(--psun);"></span>🌤️ +3〜+10</span>
+    <span class="i"><span class="sw" style="background:var(--flat);"></span>⛅ −3〜+3</span>
+    <span class="i"><span class="sw" style="background:var(--cloud);"></span>☁️ −10〜−3</span>
+    <span class="i"><span class="sw" style="background:var(--rain);"></span>🌧️ −25〜−10</span>
+    <span class="i"><span class="sw" style="background:var(--storm);"></span>⛈️ −25未満</span>
+  </div>
+
+  <div class="maps">
+    <div class="mapc">
+      <div class="h"><span class="t">商業地 価格DI（実感）</span><span class="s">R8.4.1</span></div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#a9bedf"/>
+        <use href="#iw-cn" class="rg" fill="#23407e"/>
+        <use href="#iw-ce" class="rg" fill="#c73a26"/>
+        <use href="#iw-cs" class="rg" fill="#23407e"/>
+        <use href="#iw-is" class="rg" fill="#5473b8"/>
+        <text class="weather" x="186" y="78">☁️</text>
+        <text class="weather" x="282" y="170">⛈️</text>
+        <text class="weather" x="120" y="195">☀️</text>
+        <text class="weather" x="294" y="385">⛈️</text>
+        <text class="weather" x="120" y="425">🌧️</text>
+        <text class="rg-label dark" x="186" y="110">内陸北部</text>
+        <text class="rg-di dark" x="186" y="129">−8.3</text>
+        <text class="rg-label" x="282" y="200">沿岸北部</text>
+        <text class="rg-di" x="282" y="219">−34.4</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">+12.3</text>
+        <text class="rg-label" x="294" y="415">沿岸南部</text>
+        <text class="rg-di" x="294" y="434">−35.0</text>
+        <text class="rg-label" x="120" y="455">内陸南部</text>
+        <text class="rg-di" x="120" y="474">−10.3</text>
+      </svg>
+      <p class="cap">件数DIは全域マイナス（全域−20.1）。沿岸北部−43.8は全指標で最低</p>
+    </div>
+    <div class="mapc">
+      <div class="h"><span class="t">中古住宅 価格DI（実感）</span><span class="s">R8.4.1</span></div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#de7f35"/>
+        <use href="#iw-cn" class="rg" fill="#5473b8"/>
+        <use href="#iw-ce" class="rg" fill="#de7f35"/>
+        <use href="#iw-cs" class="rg" fill="#23407e"/>
+        <use href="#iw-is" class="rg" fill="#a9bedf"/>
+        <text class="weather" x="186" y="78">🌤️</text>
+        <text class="weather" x="282" y="170">🌧️</text>
+        <text class="weather" x="120" y="195">🌤️</text>
+        <text class="weather" x="294" y="385">⛈️</text>
+        <text class="weather" x="120" y="425">☁️</text>
+        <text class="rg-label" x="186" y="110">内陸北部</text>
+        <text class="rg-di" x="186" y="129">+7.1</text>
+        <text class="rg-label" x="282" y="200">沿岸北部</text>
+        <text class="rg-di" x="282" y="219">−20.6</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">+8.8</text>
+        <text class="rg-label" x="294" y="415">沿岸南部</text>
+        <text class="rg-di" x="294" y="434">−30.0</text>
+        <text class="rg-label dark" x="120" y="455">内陸南部</text>
+        <text class="rg-di dark" x="120" y="474">−6.8</text>
+      </svg>
+      <p class="cap">件数DIは県央部・内陸北部が横ばい（0.0）まで回復。沿岸も大幅改善</p>
+    </div>
+  </div>
+
+  <div class="tw2" style="margin-top:4mm;">
+    <table class="di cmp" style="margin-top:0;">
+      <thead>
+        <tr><th class="l">商業地</th><th class="gp">価格・実感</th><th>前回比</th><th>予測</th><th style="padding-left:4mm;">件数・実感</th><th>予測</th></tr>
+      </thead>
+      <tr><td class="l">沿岸北部</td><td><span class="v m">−34.4</span></td><td><span class="d dn">▼ −11.1</span></td><td><span class="f">−34.4</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−43.8</span></td><td><span class="f">−39.3</span></td></tr>
+      <tr><td class="l">沿岸南部</td><td><span class="v m">−35.0</span></td><td><span class="d dn">▼ −3.2</span></td><td><span class="f">−35.0</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−30.0</span></td><td><span class="f">−35.0</span></td></tr>
+      <tr class="hi"><td class="l">県央部</td><td><span class="v p">+12.3</span></td><td><span class="d up">▲ +1.4</span></td><td><span class="f" style="color:var(--red);">+2.6</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−14.2</span></td><td><span class="f">−13.0</span></td></tr>
+      <tr><td class="l">内陸北部</td><td><span class="v m">−8.3</span></td><td><span class="d dn">▼ −8.3</span></td><td><span class="f">−16.7</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−30.0</span></td><td><span class="f">−50.0</span></td></tr>
+      <tr><td class="l">内陸南部</td><td><span class="v m">−10.3</span></td><td><span class="d dn">▼ −2.7</span></td><td><span class="f">−11.7</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−18.5</span></td><td><span class="f">−28.2</span></td></tr>
+      <tr class="all"><td class="l">県内全域</td><td><span class="v m">−3.8</span></td><td><span class="d dn">▼ −3.0</span></td><td><span class="f">−9.0</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−20.1</span></td><td><span class="f">−23.5</span></td></tr>
+    </table>
+
+    <table class="di cmp" style="margin-top:0;">
+      <thead>
+        <tr><th class="l">中古住宅</th><th class="gp">価格・実感</th><th>前回比</th><th>予測</th><th style="padding-left:4mm;">件数・実感</th><th>予測</th></tr>
+      </thead>
+      <tr><td class="l">沿岸北部</td><td><span class="v m">−20.6</span></td><td><span class="d dn">▼ −5.9</span></td><td><span class="f">−20.6</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−2.9</span></td><td><span class="f">−11.8</span></td></tr>
+      <tr><td class="l">沿岸南部</td><td><span class="v m">−30.0</span></td><td><span class="d">±0.0</span></td><td><span class="f">−35.0</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−10.0</span></td><td><span class="f">−20.0</span></td></tr>
+      <tr class="hi"><td class="l">県央部</td><td><span class="v p">+8.8</span></td><td><span class="d dn">▼ −2.6</span></td><td><span class="f" style="color:var(--red);">+7.6</span></td><td class="sep" style="padding-left:4mm;"><span class="f">0.0</span></td><td><span class="f" style="color:var(--red);">+3.6</span></td></tr>
+      <tr class="hi"><td class="l">内陸北部</td><td><span class="v p">+7.1</span></td><td><span class="d up">▲ +15.4</span></td><td><span class="f" style="color:var(--red);">+7.1</span></td><td class="sep" style="padding-left:4mm;"><span class="f">0.0</span></td><td><span class="f">−8.3</span></td></tr>
+      <tr><td class="l">内陸南部</td><td><span class="v m">−6.8</span></td><td><span class="d up">▲ +0.7</span></td><td><span class="f">−5.5</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−11.4</span></td><td><span class="f">−12.1</span></td></tr>
+      <tr class="all"><td class="l">県内全域</td><td><span class="v m">−1.8</span></td><td><span class="d dn">▼ −2.0</span></td><td><span class="f">−2.1</span></td><td class="sep" style="padding-left:4mm;"><span class="f">−5.1</span></td><td><span class="f">−5.3</span></td></tr>
+    </table>
+  </div>
+
+  <div class="pull">
+    <span class="qm">“</span>
+    <p>新築戸建て、マンションの価格高騰で、中古物件を見に来るお客さんが増えた。──中古住宅の需要があるが、モノがない。</p>
+    <span class="at">県央部｜盛岡市</span>
+  </div>
+
+  <div class="foot"><span class="l">岩手県不動産市場動向アンケート 第31回調査</span><span class="r num">03 <i>/</i> 06</span></div>
+</section>
+
+
+<!-- ================= PAGE 4 / RENTAL ================= -->
+<section class="page">
+  <div class="mast">
+    <div class="a">IWATE REAL ESTATE <i>MARKET REPORT</i></div>
+    <div class="b">RENTAL MARKET</div>
+  </div>
+  <div class="edge"><span class="no num">03</span><span class="bar"></span><span class="tx">RENTAL ─ 賃貸市場</span><span class="dot"></span></div>
+
+  <div class="kick"><span class="n num">03</span><span class="en">RENTAL MARKET</span><span class="ln"></span><span class="dt">賃料・入居率 実感 R8.4.1</span></div>
+  <h2 class="hl">賃貸市場 ── 売買より先に、<em>底を打ったか。</em></h2>
+  <p class="dek">住居系賃料DIの県内全域は<b>+0.8とプラス転換</b>（前回−2.5）。内陸北部は横ばいから<b>+16.7</b>へ跳ね、県央部も+9.5と3期連続のプラス。入居率DIは全域−11.4とマイナスながら前回（−18.5）から改善し、<b>沿岸南部は−40.0→+15.0へ急回復</b>した。</p>
+
+  <div class="maps" style="margin-top:4.5mm;">
+    <div class="mapc">
+      <div class="h"><span class="t">住居系 賃料DI（実感）</span><span class="s">R8.4.1</span></div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#c73a26"/>
+        <use href="#iw-cn" class="rg" fill="#a9bedf"/>
+        <use href="#iw-ce" class="rg" fill="#de7f35"/>
+        <use href="#iw-cs" class="rg" fill="#a9bedf"/>
+        <use href="#iw-is" class="rg" fill="#a9bedf"/>
+        <text class="weather" x="186" y="78">☀️</text>
+        <text class="weather" x="282" y="170">☁️</text>
+        <text class="weather" x="120" y="195">🌤️</text>
+        <text class="weather" x="294" y="385">☁️</text>
+        <text class="weather" x="120" y="425">☁️</text>
+        <text class="rg-label" x="186" y="110">内陸北部</text>
+        <text class="rg-di" x="186" y="129">+16.7</text>
+        <text class="rg-label dark" x="282" y="200">沿岸北部</text>
+        <text class="rg-di dark" x="282" y="219">−10.0</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">+9.5</text>
+        <text class="rg-label dark" x="294" y="415">沿岸南部</text>
+        <text class="rg-di dark" x="294" y="434">−10.0</text>
+        <text class="rg-label dark" x="120" y="455">内陸南部</text>
+        <text class="rg-di dark" x="120" y="474">−6.7</text>
+      </svg>
+      <p class="cap">県内全域 +0.8 ── プラス転換</p>
+    </div>
+    <div class="mapc k2">
+      <div class="h"><span class="t">住居系 入居率DI（実感）</span><span class="s">R8.4.1</span></div>
+      <svg class="iwate" viewBox="0 0 374.9 568" xmlns="http://www.w3.org/2000/svg">
+        <use href="#iw-in" class="rg" fill="#e4dcc4"/>
+        <use href="#iw-cn" class="rg" fill="#a9bedf"/>
+        <use href="#iw-ce" class="rg" fill="#5473b8"/>
+        <use href="#iw-cs" class="rg" fill="#c73a26"/>
+        <use href="#iw-is" class="rg" fill="#5473b8"/>
+        <text class="weather" x="186" y="78">⛅</text>
+        <text class="weather" x="282" y="170">☁️</text>
+        <text class="weather" x="120" y="195">🌧️</text>
+        <text class="weather" x="294" y="385">☀️</text>
+        <text class="weather" x="120" y="425">🌧️</text>
+        <text class="rg-label dark" x="186" y="110">内陸北部</text>
+        <text class="rg-di dark" x="186" y="129">0.0</text>
+        <text class="rg-label dark" x="282" y="200">沿岸北部</text>
+        <text class="rg-di dark" x="282" y="219">−6.7</text>
+        <text class="rg-label" x="120" y="225">県央部</text>
+        <text class="rg-di" x="120" y="244">−11.0</text>
+        <text class="rg-label" x="294" y="415">沿岸南部</text>
+        <text class="rg-di" x="294" y="434">+15.0</text>
+        <text class="rg-label" x="120" y="455">内陸南部</text>
+        <text class="rg-di" x="120" y="474">−17.9</text>
+      </svg>
+      <p class="cap">県内全域 −11.4 ── 前回 −18.5 から改善</p>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:5mm;margin-top:4mm;">
+    <div class="brs">
+      <p style="font-size:8.4pt;font-weight:800;letter-spacing:.12em;margin-bottom:2mm;">住居系 入居率｜回答内訳（%）</p>
+      <div class="brow"><span class="rn">沿岸北部</span><span class="tr"><span class="fl" style="left:0%;width:20%;background:#e2a893;"></span><span class="fl" style="left:20%;width:47%;background:#d9d3bd;"></span><span class="fl" style="left:67%;width:33%;background:#93a8cf;"></span></span><span class="vv" style="color:var(--blue);">−6.7</span></div>
+      <div class="brow"><span class="rn">沿岸南部</span><span class="tr"><span class="fl" style="left:0%;width:10%;background:#b3402e;"></span><span class="fl" style="left:10%;width:40%;background:#e2a893;"></span><span class="fl" style="left:50%;width:20%;background:#d9d3bd;"></span><span class="fl" style="left:70%;width:30%;background:#93a8cf;"></span></span><span class="vv" style="color:var(--red);">+15.0</span></div>
+      <div class="brow"><span class="rn">県央部</span><span class="tr"><span class="fl" style="left:0%;width:14%;background:#e2a893;"></span><span class="fl" style="left:14%;width:52%;background:#d9d3bd;"></span><span class="fl" style="left:66%;width:31%;background:#93a8cf;"></span><span class="fl" style="left:97%;width:3%;background:#4a6398;"></span></span><span class="vv" style="color:var(--blue);">−11.0</span></div>
+      <div class="brow"><span class="rn">内陸北部</span><span class="tr"><span class="fl" style="left:0%;width:17%;background:#e2a893;"></span><span class="fl" style="left:17%;width:66%;background:#d9d3bd;"></span><span class="fl" style="left:83%;width:17%;background:#93a8cf;"></span></span><span class="vv">0.0</span></div>
+      <div class="brow"><span class="rn">内陸南部</span><span class="tr"><span class="fl" style="left:0%;width:15%;background:#e2a893;"></span><span class="fl" style="left:15%;width:42%;background:#d9d3bd;"></span><span class="fl" style="left:57%;width:36%;background:#93a8cf;"></span><span class="fl" style="left:93%;width:7%;background:#4a6398;"></span></span><span class="vv" style="color:var(--blue);">−17.9</span></div>
+      <div class="brow all"><span class="rn">県内全域</span><span class="tr"><span class="fl" style="left:0%;width:1%;background:#b3402e;"></span><span class="fl" style="left:1%;width:17%;background:#e2a893;"></span><span class="fl" style="left:18%;width:45%;background:#d9d3bd;"></span><span class="fl" style="left:63%;width:33%;background:#93a8cf;"></span><span class="fl" style="left:96%;width:4%;background:#4a6398;"></span></span><span class="vv" style="color:var(--blue);">−11.4</span></div>
+      <div class="bleg">
+        <span><i style="background:#b3402e;"></i>大きく上昇</span>
+        <span><i style="background:#e2a893;"></i>やや上昇</span>
+        <span><i style="background:#d9d3bd;"></i>横ばい</span>
+        <span><i style="background:#93a8cf;"></i>やや低下</span>
+        <span><i style="background:#4a6398;"></i>大きく低下</span>
+      </div>
+    </div>
+
+    <div>
+      <table class="di cmp" style="margin-top:0;">
+        <thead>
+          <tr><th class="l">その他不動産</th><th>賃料DI</th><th>入居率DI</th></tr>
+        </thead>
+        <tr><td class="l">沿岸北部</td><td><span class="f">−16.7</span></td><td><span class="f">−26.7</span></td></tr>
+        <tr><td class="l">沿岸南部</td><td><span class="f">−16.7</span></td><td><span class="f">−11.1</span></td></tr>
+        <tr class="hi"><td class="l">県央部</td><td><span class="f" style="color:var(--red);">+9.2</span></td><td><span class="f">−7.2</span></td></tr>
+        <tr><td class="l">内陸北部</td><td><span class="f" style="color:var(--red);">+8.3</span></td><td><span class="f">−8.3</span></td></tr>
+        <tr><td class="l">内陸南部</td><td><span class="f">−7.3</span></td><td><span class="f">−20.8</span></td></tr>
+        <tr class="all"><td class="l">県内全域</td><td><span class="f">−0.9</span></td><td><span class="f">−14.5</span></td></tr>
+      </table>
+      <p style="margin-top:2.5mm;font-size:7.6pt;line-height:1.7;color:var(--ink2);">事務所・店舗等の「その他不動産」も、賃料は<b style="color:var(--ink);">県央部・内陸北部でプラス</b>。入居率の全域DIは−19.3→−14.5へ縮小した。</p>
+    </div>
+  </div>
+
+  <div class="pull">
+    <span class="qm">“</span>
+    <p>県南の一部エリアで、賃貸住宅会社のアパート建築が市場のバランスを崩し、賃料相場全体が下落する現象が生じている。</p>
+    <span class="at">県央部｜盛岡市</span>
+  </div>
+
+  <div class="foot"><span class="l">岩手県不動産市場動向アンケート 第31回調査</span><span class="r num">04 <i>/</i> 06</span></div>
+</section>
+
+
+<!-- ================= PAGE 5 / TREND ================= -->
+<section class="page">
+  <div class="mast">
+    <div class="a">IWATE REAL ESTATE <i>MARKET REPORT</i></div>
+    <div class="b">15-YEAR TREND</div>
+  </div>
+  <div class="edge"><span class="no num">04</span><span class="bar"></span><span class="tx">TREND ─ 時系列分析</span><span class="dot"></span></div>
+
+  <div class="kick"><span class="n num">04</span><span class="en">15-YEAR TREND</span><span class="ln"></span><span class="dt">H23.6 ─ R8.4 実感／R8.10 予測</span></div>
+  <h2 class="hl">15年の定点観測 ── 構図は<em>「沿岸」から「県央」へ</em>。</h2>
+  <p class="dek">震災直後は<b>復興需要で沿岸部がプラス、県央部はマイナス</b>という真逆の構図。R3以降は完全に逆転した。<span style="color:var(--red);font-weight:800;">赤線＝県央部</span>、<b>黒線＝県内全域</b>、灰線＝その他エリア。右端の破線は予測。</p>
+
+  <div class="chc" style="margin-top:3.5mm;">
+    <div class="h"><span class="t">住宅地 価格DI</span><span class="s">実線＝実感／破線＝予測</span></div>
+    <svg viewBox="0 0 700 204" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+<line x1="30" y1="186.0" x2="613" y2="186.0" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="188.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-60</text>
+<line x1="30" y1="156.3" x2="613" y2="156.3" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="158.5" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-40</text>
+<line x1="30" y1="126.7" x2="613" y2="126.7" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="128.9" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-20</text>
+<line x1="30" y1="97.0" x2="613" y2="97.0" stroke="#15171c" stroke-width="1"/>
+<text x="26" y="99.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">0</text>
+<line x1="30" y1="67.3" x2="613" y2="67.3" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="69.5" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">20</text>
+<line x1="30" y1="37.7" x2="613" y2="37.7" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="39.9" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">40</text>
+<line x1="30" y1="8.0" x2="613" y2="8.0" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="10.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">60</text>
+<rect x="565.4" y="8" width="44.6" height="178" fill="rgba(199,58,38,.05)"/>
+<text x="30.0" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H23/6</text>
+<text x="74.6" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H23/9</text>
+<text x="119.2" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H24/4</text>
+<text x="163.8" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R3/10</text>
+<text x="208.5" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R4/4</text>
+<text x="253.1" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R4/10</text>
+<text x="297.7" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R5/4</text>
+<text x="342.3" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R5/10</text>
+<text x="386.9" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R6/4</text>
+<text x="431.5" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R6/10</text>
+<text x="476.2" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R7/4</text>
+<text x="520.8" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R7/10</text>
+<text x="565.4" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R8/4</text>
+<text x="610.0" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#c73a26">予測</text>
+<polyline points="30.0,52.5 74.6,74.2 119.2,92.7 163.8,144.6 208.5,121.8 253.1,164.5 297.7,143.4 342.3,144.2 386.9,150.0 431.5,146.4 476.2,125.5 520.8,136.3 565.4,136.3" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="136.3" x2="610.0" y2="149.4" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="136.3" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,37.7 74.6,67.3 119.2,22.8 163.8,140.6 208.5,129.5 253.1,139.4 297.7,150.0 342.3,156.3 386.9,148.3 431.5,146.4 476.2,162.0 520.8,146.4 565.4,148.9" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="148.9" x2="610.0" y2="148.9" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="148.9" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,111.8 74.6,106.3 119.2,129.9 163.8,109.3 208.5,128.7 253.1,82.2 297.7,117.2 342.3,104.4 386.9,104.4 431.5,97.0 476.2,109.3 520.8,121.8 565.4,118.2" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="118.2" x2="610.0" y2="118.2" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="118.2" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,117.2 74.6,120.9 119.2,132.6 163.8,101.5 208.5,97.0 253.1,89.9 297.7,78.5 342.3,93.4 386.9,89.3 431.5,85.6 476.2,98.9 520.8,99.1 565.4,101.9" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="101.9" x2="610.0" y2="106.9" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="101.9" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,110.6 74.6,115.5 119.2,132.0 163.8,67.6 208.5,51.9 253.1,52.5 297.7,55.3 342.3,63.0 386.9,61.5 431.5,78.5 476.2,65.8 520.8,88.2 565.4,80.4" fill="none" stroke="#c73a26" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="80.4" x2="610.0" y2="91.4" stroke="#c73a26" stroke-width="2.1" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="80.4" r="2.6" fill="#c73a26" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,104.1 74.6,110.3 119.2,121.9 163.8,93.7 208.5,82.5 253.1,81.6 297.7,79.1 342.3,88.1 386.9,84.8 431.5,90.3 476.2,87.4 520.8,99.8 565.4,97.7" fill="none" stroke="#15171c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="97.7" x2="610.0" y2="105.8" stroke="#15171c" stroke-width="2.4" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="97.7" r="2.6" fill="#15171c" stroke="#fff" stroke-width="0.9"/>
+<text x="617" y="93.8" font-family="Segoe UI,Verdana" font-weight="800" font-size="8.4" fill="#c73a26">県央部 +11.2</text>
+<text x="617" y="108.2" font-family="Segoe UI,Verdana" font-weight="800" font-size="8.4" fill="#15171c">県内全域 −0.5</text>
+<text x="617" y="120.3" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">内陸南部 −3.3</text>
+<text x="617" y="132.5" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">内陸北部 −14.3</text>
+<text x="617" y="151.3" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">沿岸南部 −35.0</text>
+<text x="617" y="163.5" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">沿岸北部 −26.5</text>
+</svg>
+  </div>
+
+  <div class="chc" style="margin-top:3.2mm;">
+    <div class="h"><span class="t">商業地 価格DI</span><span class="s">実線＝実感／破線＝予測</span></div>
+    <svg viewBox="0 0 700 204" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+<line x1="30" y1="186.0" x2="613" y2="186.0" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="188.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-60</text>
+<line x1="30" y1="150.4" x2="613" y2="150.4" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="152.6" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-40</text>
+<line x1="30" y1="114.8" x2="613" y2="114.8" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="117.0" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-20</text>
+<line x1="30" y1="79.2" x2="613" y2="79.2" stroke="#15171c" stroke-width="1"/>
+<text x="26" y="81.4" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">0</text>
+<line x1="30" y1="43.6" x2="613" y2="43.6" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="45.8" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">20</text>
+<line x1="30" y1="8.0" x2="613" y2="8.0" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="10.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">40</text>
+<rect x="565.4" y="8" width="44.6" height="178" fill="rgba(199,58,38,.05)"/>
+<text x="30.0" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H23/6</text>
+<text x="74.6" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H23/9</text>
+<text x="119.2" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H24/4</text>
+<text x="163.8" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R3/10</text>
+<text x="208.5" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R4/4</text>
+<text x="253.1" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R4/10</text>
+<text x="297.7" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R5/4</text>
+<text x="342.3" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R5/10</text>
+<text x="386.9" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R6/4</text>
+<text x="431.5" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R6/10</text>
+<text x="476.2" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R7/4</text>
+<text x="520.8" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R7/10</text>
+<text x="565.4" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R8/4</text>
+<text x="610.0" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#c73a26">予測</text>
+<polyline points="30.0,101.5 74.6,108.9 119.2,118.2 163.8,123.7 208.5,123.7 253.1,123.7 297.7,138.5 342.3,132.6 386.9,142.7 431.5,168.2 476.2,120.3 520.8,120.7 565.4,140.4" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="140.4" x2="610.0" y2="140.4" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="140.4" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,186.0 74.6,168.2 119.2,135.8 163.8,126.7 208.5,108.9 253.1,130.1 297.7,130.1 342.3,142.7 386.9,140.8 431.5,108.9 476.2,157.2 520.8,135.8 565.4,141.5" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="141.5" x2="610.0" y2="141.5" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="141.5" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,114.8 74.6,91.8 119.2,128.7 163.8,114.8 208.5,132.6 253.1,59.4 297.7,118.7 342.3,91.8 386.9,99.0 431.5,168.2 476.2,79.2 520.8,79.2 565.4,94.0" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="94.0" x2="610.0" y2="108.9" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="94.0" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,128.3 74.6,131.2 119.2,133.7 163.8,103.9 208.5,105.2 253.1,82.0 297.7,81.0 342.3,89.9 386.9,81.0 431.5,71.7 476.2,83.1 520.8,92.7 565.4,97.5" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="97.5" x2="610.0" y2="100.0" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="97.5" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,122.8 74.6,122.8 119.2,139.0 163.8,82.0 208.5,70.1 253.1,61.8 297.7,53.9 342.3,58.7 386.9,42.7 431.5,60.5 476.2,46.8 520.8,59.8 565.4,57.3" fill="none" stroke="#c73a26" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="57.3" x2="610.0" y2="74.6" stroke="#c73a26" stroke-width="2.1" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="57.3" r="2.6" fill="#c73a26" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,128.3 74.6,125.1 119.2,134.2 163.8,99.3 208.5,92.2 253.1,80.4 297.7,78.0 342.3,84.4 386.9,74.8 431.5,79.2 476.2,73.0 520.8,80.6 565.4,86.0" fill="none" stroke="#15171c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="86.0" x2="610.0" y2="95.2" stroke="#15171c" stroke-width="2.4" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="86.0" r="2.6" fill="#15171c" stroke="#fff" stroke-width="0.9"/>
+<text x="617" y="77.0" font-family="Segoe UI,Verdana" font-weight="800" font-size="8.4" fill="#c73a26">県央部 +12.3</text>
+<text x="617" y="97.6" font-family="Segoe UI,Verdana" font-weight="800" font-size="8.4" fill="#15171c">県内全域 −3.8</text>
+<text x="617" y="109.8" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">内陸南部 −10.3</text>
+<text x="617" y="122.0" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">内陸北部 −8.3</text>
+<text x="617" y="142.8" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">沿岸北部 −34.4</text>
+<text x="617" y="155.0" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">沿岸南部 −35.0</text>
+</svg>
+  </div>
+
+  <div class="chc" style="margin-top:3.2mm;">
+    <div class="h"><span class="t">中古住宅 価格DI</span><span class="s">実線＝実感／破線＝予測</span></div>
+    <svg viewBox="0 0 700 204" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+<line x1="30" y1="186.0" x2="613" y2="186.0" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="188.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-60</text>
+<line x1="30" y1="156.3" x2="613" y2="156.3" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="158.5" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-40</text>
+<line x1="30" y1="126.7" x2="613" y2="126.7" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="128.9" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">-20</text>
+<line x1="30" y1="97.0" x2="613" y2="97.0" stroke="#15171c" stroke-width="1"/>
+<text x="26" y="99.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">0</text>
+<line x1="30" y1="67.3" x2="613" y2="67.3" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="69.5" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">20</text>
+<line x1="30" y1="37.7" x2="613" y2="37.7" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="39.9" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">40</text>
+<line x1="30" y1="8.0" x2="613" y2="8.0" stroke="#e7e3d8" stroke-width="0.55"/>
+<text x="26" y="10.2" text-anchor="end" font-family="Segoe UI,Verdana" font-weight="600" font-size="7.0" fill="#8b8e96">60</text>
+<rect x="565.4" y="8" width="44.6" height="178" fill="rgba(199,58,38,.05)"/>
+<text x="30.0" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H23/6</text>
+<text x="74.6" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H23/9</text>
+<text x="119.2" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">H24/4</text>
+<text x="163.8" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R3/10</text>
+<text x="208.5" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R4/4</text>
+<text x="253.1" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R4/10</text>
+<text x="297.7" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R5/4</text>
+<text x="342.3" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R5/10</text>
+<text x="386.9" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R6/4</text>
+<text x="431.5" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R6/10</text>
+<text x="476.2" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R7/4</text>
+<text x="520.8" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R7/10</text>
+<text x="565.4" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#8b8e96">R8/4</text>
+<text x="610.0" y="199" text-anchor="middle" font-family="Segoe UI,Verdana" font-weight="600" font-size="6.8" fill="#c73a26">予測</text>
+<polyline points="30.0,47.6 74.6,90.8 119.2,57.7 163.8,134.1 208.5,136.6 253.1,119.2 297.7,139.4 342.3,144.2 386.9,155.3 431.5,146.4 476.2,136.9 520.8,118.8 565.4,127.6" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="127.6" x2="610.0" y2="127.6" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="127.6" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,22.8 74.6,80.5 119.2,29.1 163.8,148.0 208.5,139.4 253.1,125.5 297.7,154.1 342.3,146.4 386.9,165.5 431.5,97.0 476.2,143.4 520.8,141.5 565.4,141.5" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="141.5" x2="610.0" y2="148.9" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="141.5" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,111.8 74.6,106.3 119.2,134.1 163.8,118.2 208.5,134.1 253.1,82.2 297.7,110.5 342.3,111.8 386.9,119.2 431.5,171.2 476.2,109.3 520.8,109.3 565.4,86.5" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="86.5" x2="610.0" y2="86.5" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="86.5" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,107.5 74.6,111.2 119.2,119.4 163.8,103.1 208.5,102.0 253.1,99.2 297.7,91.4 342.3,109.3 386.9,97.0 431.5,91.7 476.2,103.7 520.8,108.1 565.4,107.1" fill="none" stroke="#b7bac2" stroke-width="1.15" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="107.1" x2="610.0" y2="105.2" stroke="#b7bac2" stroke-width="1.15" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="107.1" r="1.8" fill="#b7bac2" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,100.7 74.6,100.0 119.2,100.7 163.8,79.9 208.5,64.5 253.1,59.9 297.7,58.4 342.3,71.0 386.9,73.4 431.5,74.5 476.2,65.7 520.8,80.1 565.4,83.9" fill="none" stroke="#c73a26" stroke-width="2.1" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="83.9" x2="610.0" y2="85.7" stroke="#c73a26" stroke-width="2.1" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="83.9" r="2.6" fill="#c73a26" stroke="#fff" stroke-width="0.9"/>
+<polyline points="30.0,94.8 74.6,102.3 119.2,100.0 163.8,100.4 208.5,92.0 253.1,84.8 297.7,84.7 342.3,97.4 386.9,96.6 431.5,88.4 476.2,90.2 520.8,96.7 565.4,99.7" fill="none" stroke="#15171c" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<line x1="565.4" y1="99.7" x2="610.0" y2="100.1" stroke="#15171c" stroke-width="2.4" stroke-dasharray="3.2 2.8" stroke-linecap="round"/>
+<circle cx="565.4" cy="99.7" r="2.6" fill="#15171c" stroke="#fff" stroke-width="0.9"/>
+<text x="617" y="88.1" font-family="Segoe UI,Verdana" font-weight="800" font-size="8.4" fill="#c73a26">県央部 +8.8</text>
+<text x="617" y="100.3" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">内陸北部 +7.1</text>
+<text x="617" y="112.5" font-family="Segoe UI,Verdana" font-weight="800" font-size="8.4" fill="#15171c">県内全域 −1.8</text>
+<text x="617" y="124.7" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">内陸南部 −6.8</text>
+<text x="617" y="136.8" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">沿岸北部 −20.6</text>
+<text x="617" y="151.3" font-family="Segoe UI,Verdana" font-weight="600" font-size="8.4" fill="#94979f">沿岸南部 −30.0</text>
+</svg>
+  </div>
+
+  <div class="note">
+    <h5>チャートの読み方</h5>
+    県央部（赤）は3市場すべてでR3以降プラス圏を維持し、今回は上げ幅も再拡大。ただし<em>予測（破線）は全系列で下向き</em>で、現場は先行きに慎重だ。図にない指標では、<b>住居系賃料DI（全域+0.8）がプラス圏へ浮上</b>し、賃貸の底打ちを示唆する。
+  </div>
+
+  <div class="foot"><span class="l">岩手県不動産市場動向アンケート 第31回調査</span><span class="r num">05 <i>/</i> 06</span></div>
+</section>
+
+
+<!-- ================= PAGE 6 / VOICES & CONCLUSION ================= -->
+<section class="page">
+  <div class="mast">
+    <div class="a">IWATE REAL ESTATE <i>MARKET REPORT</i></div>
+    <div class="b">VOICES FROM THE FIELD</div>
+  </div>
+  <div class="edge"><span class="no num">05</span><span class="bar"></span><span class="tx">VOICES ─ 現場の声</span><span class="dot"></span></div>
+
+  <div class="kick"><span class="n num">05</span><span class="en">VOICES FROM THE FIELD</span><span class="ln"></span><span class="dt">問9・問10・その他 自由記述より</span></div>
+  <h2 class="hl">現場の声 ── 数字の裏で、<em>何が起きているか。</em></h2>
+
+  <div class="heroq">
+    <span class="qm">“</span>
+    <div>
+      <p>売却相談が増え、仲介在庫が増加している。一方、買い手側はより慎重になっている。エネルギー危機の不安、先行きの不透明感が強くなり、よりマーケットは冷えていると感じる。</p>
+      <span class="at">県央部｜盛岡市 ── 売りが増え、買いが引く。今回調査を象徴する一言</span>
+    </div>
+  </div>
+
+  <div class="vwrap">
+    <div class="vgroup">
+      <h4>二極化する価格<span class="no num">Ⅰ</span></h4>
+      <div class="vq"><p>同じ地域でも立地により、格差が広がっている。</p><span class="at">県央部｜盛岡市</span></div>
+      <div class="vq"><p>駅・中心部など利便性が高い場所はやや上昇。郊外・農村部・空家が多い地域は下落。</p><span class="at">内陸南部｜花巻市</span></div>
+    </div>
+
+    <div class="vgroup">
+      <h4>金利・融資の壁<span class="no num">Ⅱ</span></h4>
+      <div class="vq"><p>住宅ローンが組めない。融資が通らないケースが増えてきている。</p><span class="at">県央部｜盛岡市</span></div>
+      <div class="vq"><p>物価上昇に伴い、融資の審査が通らない人が増えてきていると聞いている。</p><span class="at">内陸南部｜花巻市</span></div>
+    </div>
+
+    <div class="vgroup">
+      <h4>売り手と買い手<span class="no num">Ⅲ</span></h4>
+      <div class="vq"><p>買い手市場のため、売価がどんどん下降している。</p><span class="at">沿岸南部｜陸前高田市</span></div>
+      <div class="vq"><p>関東圏の宅建業者から、収益物件の問合せが多くなっている。</p><span class="at">県央部｜盛岡市</span></div>
+    </div>
+
+    <div class="vgroup">
+      <h4>地域トピック<span class="no num">Ⅳ</span></h4>
+      <div class="vq"><p>二戸駅周辺で土地区画整理事業が進行中。商業地域に住宅の新築が見受けられる。</p><span class="at">内陸北部｜二戸市</span></div>
+      <div class="vq"><p>アパート入居者に、外国籍の人が増えてきた。</p><span class="at">県央部｜盛岡市</span></div>
+    </div>
+
+    <div class="vgroup">
+      <h4>AI活用 ─ 新設問<span class="no num" style="font-size:8pt;color:var(--red);">NEW</span></h4>
+      <div class="vq"><p>物件紹介文や顧客対応文の作成補助に活用し、業務効率化。最終確認は自身で行っている。</p><span class="at">沿岸北部｜宮古市</span></div>
+      <div class="vq"><p>リビング写真で、AIを使ったバーチャルステージングを使っている。</p><span class="at">県央部｜盛岡市</span></div>
+    </div>
+
+    <div class="vgroup">
+      <h4>行政への要望<span class="no num">Ⅴ</span></h4>
+      <div class="vq"><p>盛土規制法の適用範囲を県内全土ではなく一部にしてほしい。ハザードマップを参考に。</p><span class="at">県央部｜盛岡市</span></div>
+      <div class="vq"><p>リノベーション補助があれば、中古住宅の流通がもう少し活発になると思う。</p><span class="at">県央部｜盛岡市</span></div>
+    </div>
+  </div>
+
+  <div class="chips">
+    <span class="c">AI活用は<b>物件広告・チラシ</b>が最多</span>
+    <span class="c">書類作成・資料要約</span>
+    <span class="c">重説・特約の確認</span>
+    <span class="c">「今後活用したい」の声が多数</span>
+    <span class="c">要望は<b>盛土規制法・空き家・物価高</b>に集中</span>
+  </div>
+
+  <div class="concl">
+    <p class="k">CONCLUSION ── 第31回調査を終えて</p>
+    <p class="m">「県央一強」はより鮮明に。それでも<i>中古住宅・内陸北部のプラス転換</i>と<i>賃貸市場の底打ちの気配</i>が、次の半年を読む鍵になる。</p>
+    <p class="src">
+      <b>出典</b>　第31回 岩手県不動産市場動向アンケート調査結果（令和8年4月1日時点／令和8年7月公表）─ 岩手県宅地建物取引業協会・全日本不動産協会岩手県本部・岩手県不動産鑑定士協会　<b>地図</b>　国土数値情報を5エリアに統合・簡略化　｜　本レポートは原典データを再構成したオリジナル要約版。数値・引用はすべて原典に依拠し、引用は趣旨を変えない範囲で抜粋・整形した。
+    </p>
+  </div>
+
+  <div class="foot"><span class="l">岩手県不動産市場動向アンケート 第31回調査</span><span class="r num">06 <i>/</i> 06</span></div>
+</section>
+
+</body>
+</html>
